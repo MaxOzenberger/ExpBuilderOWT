@@ -1,0 +1,24 @@
+{
+  "created": 1629291026354,
+  "description": "",
+  "id": "0",
+  "modified": 1630331758593,
+  "owner": "MOzenberger_installations",
+  "tags": [],
+  "thumbnail": null,
+  "title": "I3S Cesium Dev",
+  "type": "Web Experience",
+  "snippet": "",
+  "typeKeywords": [
+    "EXB Experience",
+    "Ready To Use",
+    "JavaScript",
+    "status: Published",
+    "version:1.5.0"
+  ],
+  "portalUrl": "https://esrinstallations.maps.arcgis.com",
+  "username": "MOzenberger_installations",
+  "name": "I3S Cesium Dev",
+  "isLocalApp": true,
+  "url": null
+}
