@@ -1,0 +1,11 @@
+{
+  "queryItems": [],
+  "arrangeType": "BLOCK",
+  "arrangeWrap": false,
+  "sizeMap": {
+    "arrangementIconPopper": {
+      "minSize": { "width": 300, "height": 300 },
+      "defaultSize": { "width": 360, "height": 480 }
+    }
+  }
+}

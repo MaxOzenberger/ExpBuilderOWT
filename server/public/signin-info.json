@@ -4,5 +4,11 @@
     "clientId": "qWgWhRxcsbizHuC2",
     "supportsOAuth": true,
     "isWebTier": false
+  },
+  {
+    "portalUrl": "https://dodterrain.org/portal",
+    "clientId": "3V0alcPKu9QrJXwD",
+    "supportsOAuth": true,
+    "isWebTier": false
   }
 ]

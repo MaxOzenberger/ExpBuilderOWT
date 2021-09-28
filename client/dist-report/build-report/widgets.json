@@ -1,0 +1,23 @@
+{
+  "entrypoints": {
+    "widgets/simple/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": 0,
+          "names": [
+            "widgets/simple/dist/runtime/widget"
+          ],
+          "modules": [
+            "./your-extensions/widgets/simple/src/runtime/widget.tsx",
+            "external \"jimu-core\""
+          ]
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "outputPath": "C:\\src\\ExpBuilderOWT\\client\\dist",
+  "publicPath": "",
+  "version": "4.46.0"
+}

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>An app based on JS API, show auth post message</title>
+
+    <link rel="stylesheet" href="https://jsdev.arcgis.com/4.19/esri/themes/light/main.css" />
+
+    <script src="https://jsdev.arcgis.com/4.19/"></script>
+    <style>
+      html,
+      body {
+        font-size: 14px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+    </style>
+    <script>
+      require([
+        "esri/portal/Portal",
+        "esri/identity/OAuthInfo",
+        "esri/identity/IdentityManager",
+        "esri/WebMap", "esri/views/MapView"
+      ], function(Portal, OAuthInfo, esriId, WebMap, MapView) {
+        let params = new URLSearchParams(document.location.search.substring(1));
+        const arcgisAuthOrigin = params.get("arcgis-auth-origin");
+        const portalUrl = 'https://beijing.mapsdevext.arcgis.com/'
+
+        if (arcgisAuthOrigin) { // embed
+          // embed this URL https://junshandev.arcgis.com/experience/test/js-api-host-app.html?arcgis-auth-origin=https%3A%2F%2Fjunshan.arcgis.com&arcgis-auth-portal=https%3A%2F%2Fbeijing.mapsdevext.arcgis.com%2Fsharing%2Frest
+          esriId.checkSignInStatus(portalUrl).then(() => {
+            console.log(11, esriId)
+            initMap(portalUrl)
+          })
+
+        }else{ // as host
+          var info = new OAuthInfo({
+            portalUrl: portalUrl,
+            appId: "JdLqiEcdj9akcoVI",
+            popup: false
+          });
+          esriId.registerOAuthInfos([info]);
+          esriId.enablePostMessageAuth(`${portalUrl}sharing/rest`)
+
+          initMap(portalUrl);
+          document.getElementById('ifr').src = `https://junshandev.arcgis.com/experience/d99b9afeda7b4809bc535e4c9b5f1995/?draft=true&arcgis-auth-origin=${encodeURIComponent(window.location.origin)}&arcgis-auth-portal=${encodeURIComponent(portalUrl)}`
+        }
+
+        function initMap(portalUrl){
+          // a private webmap
+          var webmap = new WebMap({
+            portalItem: {
+              id: "899ae1fa79d64065ac44ee88c229ecc8",
+              portal: { url: portalUrl }
+            }
+          });
+
+          var view = new MapView({
+            map: webmap,
+            container: "viewDiv"
+          });
+        }
+
+    })
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv" class="esri-item-gallery" style="width: 300px;height: 300px;"></div>
+    <iframe id="ifr" width="500px" height="500px"></iframe>
+  </body>
+</html>

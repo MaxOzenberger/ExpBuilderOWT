@@ -1,0 +1,30 @@
+{
+  "entrypoints": {
+    "arcgis-charts": {
+      "chunks": [
+        {
+          "id": 0,
+          "names": [
+            "arcgis-charts"
+          ],
+          "modules": [
+            "./jimu-ui/arcgis-charts.ts + 5 modules",
+            "(webpack)/buildin/harmony-module.js",
+            "(webpack)/buildin/global.js",
+            "./node_modules/arcgis-charts-js/dist/esm/index-c0d31bae.js",
+            "./node_modules/arcgis-charts-shared-utils/dist/esm/index.js",
+            "./node_modules/buffer/index.js",
+            "./node_modules/isarray/index.js",
+            "./node_modules/buffer/node_modules/base64-js/index.js",
+            "./node_modules/ieee754/index.js"
+          ]
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "outputPath": "D:\\jenkins\\workspace\\exb-DE-release-build\\client\\dist/arcgis-charts",
+  "publicPath": "../arcgis-charts/",
+  "version": "4.46.0"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "portalUrl": "https://geoacuity.maps.arcgis.com",
+    "clientId": "Gzvbo8jDuPE2Bs0l",
+    "supportsOAuth": true,
+    "isWebTier": false
+  },
+  {
+    "portalUrl": "https://li4vzyakql0gvyu8.maps.arcgis.com",
+    "clientId": "Gzvbo8jDuPE2Bs0l",
+    "supportsOAuth": true,
+    "isWebTier": false
+  },
+  {
+    "portalUrl": "https://dodterrain.org/portal",
+    "clientId": "3V0alcPKu9QrJXwD",
+    "supportsOAuth": true,
+    "isWebTier": false
+  }
+]

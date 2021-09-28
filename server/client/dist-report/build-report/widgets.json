@@ -1,0 +1,279 @@
+{
+  "entrypoints": {
+    "widgets/get-map-coordinates/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": 2,
+          "names": [
+            "widgets/get-map-coordinates/dist/runtime/widget"
+          ],
+          "modules": [
+            "./your-extensions/widgets/get-map-coordinates/src/runtime/widget.tsx + 1 modules",
+            "external \"jimu-arcgis\"",
+            "external \"jimu-core/react-dom\"",
+            "external \"jimu-core\"",
+            "external \"jimu-core/react\"",
+            "./node_modules/@babel/runtime/helpers/esm/extends.js",
+            "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js",
+            "./node_modules/clsx/dist/clsx.m.js",
+            "./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules",
+            "./node_modules/prop-types/index.js",
+            "./node_modules/@material-ui/core/esm/utils/capitalize.js",
+            "./node_modules/@material-ui/core/esm/utils/useForkRef.js",
+            "./node_modules/axios/lib/utils.js",
+            "./node_modules/@material-ui/core/esm/styles/colorManipulator.js",
+            "./node_modules/@material-ui/core/esm/utils/useEventCallback.js",
+            "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+            "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 3 modules",
+            "./node_modules/@babel/runtime/helpers/esm/typeof.js",
+            "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+            "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js + 1 modules",
+            "./node_modules/@material-ui/core/esm/utils/setRef.js",
+            "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
+            "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
+            "./node_modules/@babel/runtime/helpers/esm/createClass.js",
+            "./node_modules/react-transition-group/esm/TransitionGroupContext.js",
+            "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
+            "./node_modules/@material-ui/core/esm/styles/defaultTheme.js + 21 modules",
+            "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules",
+            "./node_modules/axios/lib/defaults.js",
+            "./node_modules/@material-ui/core/esm/styles/zIndex.js",
+            "./node_modules/react-is/index.js",
+            "./node_modules/axios/lib/helpers/bind.js",
+            "./node_modules/axios/lib/helpers/buildURL.js",
+            "./node_modules/process/browser.js",
+            "./node_modules/axios/lib/core/enhanceError.js",
+            "./node_modules/axios/lib/adapters/xhr.js",
+            "./node_modules/axios/lib/core/createError.js",
+            "./node_modules/axios/lib/cancel/isCancel.js",
+            "./node_modules/axios/lib/core/mergeConfig.js",
+            "./node_modules/axios/lib/cancel/Cancel.js",
+            "./node_modules/axios/index.js",
+            "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+            "./node_modules/@material-ui/utils/esm/formatMuiErrorMessage.js",
+            "./node_modules/axios/lib/axios.js",
+            "./node_modules/axios/lib/core/Axios.js",
+            "./node_modules/axios/lib/core/InterceptorManager.js",
+            "./node_modules/axios/lib/core/dispatchRequest.js",
+            "./node_modules/axios/lib/core/transformData.js",
+            "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+            "./node_modules/axios/lib/core/settle.js",
+            "./node_modules/axios/lib/helpers/cookies.js",
+            "./node_modules/axios/lib/core/buildFullPath.js",
+            "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+            "./node_modules/axios/lib/helpers/combineURLs.js",
+            "./node_modules/axios/lib/helpers/parseHeaders.js",
+            "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+            "./node_modules/axios/lib/helpers/validator.js",
+            "./node_modules/axios/package.json",
+            "./node_modules/axios/lib/cancel/CancelToken.js",
+            "./node_modules/axios/lib/helpers/spread.js",
+            "./node_modules/axios/lib/helpers/isAxiosError.js",
+            "./node_modules/prop-types/factoryWithThrowingShims.js",
+            "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+            "./node_modules/react-is/cjs/react-is.production.min.js",
+            "./node_modules/@material-ui/styles/esm/mergeClasses/mergeClasses.js",
+            "./node_modules/@material-ui/utils/esm/deepmerge.js",
+            "./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js",
+            "./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 20 modules",
+            "./node_modules/@material-ui/core/esm/Button/Button.js + 6 modules",
+            "./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules"
+          ]
+        }
+      ]
+    },
+    "widgets/get-map-coordinates/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": 3,
+          "names": [
+            "widgets/get-map-coordinates/dist/setting/setting"
+          ],
+          "modules": [
+            "./your-extensions/widgets/get-map-coordinates/src/setting/setting.tsx",
+            "external \"jimu-ui/advanced/setting-components\"",
+            "external \"jimu-core\""
+          ]
+        }
+      ]
+    },
+    "widgets/ProductList/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": 0,
+          "names": [
+            "widgets/ProductList/dist/runtime/widget"
+          ],
+          "modules": [
+            "./your-extensions/widgets/ProductList/src/runtime/widget.tsx + 185 modules",
+            "(webpack)/buildin/global.js",
+            "@aws-sdk/signature-v4-crt (ignored)",
+            "external \"jimu-arcgis\"",
+            "external \"jimu-core\"",
+            "external \"jimu-core/react\"",
+            "./node_modules/@aws-sdk/protocol-http/dist/es/index.js + 5 modules",
+            "./node_modules/fast-xml-parser/src/util.js",
+            "./node_modules/tslib/tslib.es6.js",
+            "./node_modules/@aws-sdk/util-utf8-browser/dist/es/index.js + 2 modules",
+            "./node_modules/process/browser.js",
+            "./node_modules/@aws-crypto/crc32/build/index.js",
+            "./node_modules/fast-xml-parser/src/xmlstr2xmlnode.js",
+            "./node_modules/@aws-sdk/util-locate-window/dist/es/index.js",
+            "./node_modules/@aws-crypto/util/build/index.js",
+            "./node_modules/@aws-sdk/smithy-client/dist/es/emitWarningIfUnsupportedVersion.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/ie11Sha256.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/constants.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/webCryptoSha256.js",
+            "./node_modules/@aws-crypto/sha256-js/build/constants.js",
+            "./node_modules/entities/lib/decode.js",
+            "./node_modules/entities/lib/maps/entities.json",
+            "./node_modules/entities/lib/maps/xml.json",
+            "./node_modules/entities/lib/encode.js",
+            "./node_modules/@aws-sdk/is-array-buffer/dist/es/index.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/index.js",
+            "./node_modules/@aws-sdk/client-s3/dist/es/package.json",
+            "./node_modules/fast-xml-parser/src/parser.js",
+            "./node_modules/entities/lib/index.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/crossPlatformSha256.js",
+            "./node_modules/@aws-crypto/sha256-browser/build/isEmptyData.js",
+            "./node_modules/@aws-crypto/util/build/convertToBuffer.js",
+            "./node_modules/buffer/index.js",
+            "./node_modules/base64-js/index.js",
+            "./node_modules/ieee754/index.js",
+            "./node_modules/isarray/index.js",
+            "./node_modules/@aws-crypto/util/build/isEmptyData.js",
+            "./node_modules/@aws-crypto/util/build/numToUint8.js",
+            "./node_modules/@aws-crypto/sha256-js/build/index.js",
+            "./node_modules/@aws-crypto/sha256-js/build/jsSha256.js",
+            "./node_modules/@aws-crypto/sha256-js/build/RawSha256.js",
+            "./node_modules/@aws-crypto/supports-web-crypto/build/index.js",
+            "./node_modules/@aws-crypto/supports-web-crypto/build/supportsWebCrypto.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/index.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/CryptoOperation.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/Key.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/KeyOperation.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/MsSubtleCrypto.js",
+            "./node_modules/@aws-crypto/ie11-detection/build/MsWindow.js",
+            "./node_modules/@aws-crypto/crc32/build/aws_crc32.js",
+            "./node_modules/fast-xml-parser/src/node2json.js",
+            "./node_modules/fast-xml-parser/src/xmlNode.js",
+            "./node_modules/fast-xml-parser/src/validator.js",
+            "./node_modules/fast-xml-parser/src/nimndata.js",
+            "./node_modules/fast-xml-parser/src/node2json_str.js",
+            "./node_modules/fast-xml-parser/src/json2xml.js",
+            "./node_modules/entities/lib/maps/legacy.json",
+            "./node_modules/entities/lib/decode_codepoint.js",
+            "./node_modules/entities/lib/maps/decode.json"
+          ]
+        }
+      ]
+    },
+    "widgets/ProductList/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": 1,
+          "names": [
+            "widgets/ProductList/dist/setting/setting"
+          ],
+          "modules": [
+            "./your-extensions/widgets/ProductList/src/setting/setting.tsx",
+            "external \"jimu-ui/advanced/setting-components\"",
+            "external \"jimu-core\""
+          ]
+        }
+      ]
+    },
+    "widgets/simple/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": 4,
+          "names": [
+            "widgets/simple/dist/runtime/widget"
+          ],
+          "modules": [
+            "./your-extensions/widgets/simple/src/runtime/widget.tsx + 56 modules",
+            "external \"jimu-core/react-dom\"",
+            "external \"jimu-core\"",
+            "external \"jimu-core/react\"",
+            "./node_modules/@babel/runtime/helpers/esm/extends.js",
+            "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js",
+            "./node_modules/clsx/dist/clsx.m.js",
+            "./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules",
+            "./node_modules/prop-types/index.js",
+            "./node_modules/@material-ui/core/esm/utils/capitalize.js",
+            "./node_modules/@material-ui/core/esm/utils/useForkRef.js",
+            "./node_modules/axios/lib/utils.js",
+            "./node_modules/@material-ui/core/esm/styles/colorManipulator.js",
+            "./node_modules/@material-ui/core/esm/utils/useEventCallback.js",
+            "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+            "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 3 modules",
+            "./node_modules/@babel/runtime/helpers/esm/typeof.js",
+            "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+            "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js + 1 modules",
+            "./node_modules/@material-ui/core/esm/utils/setRef.js",
+            "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
+            "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
+            "./node_modules/@babel/runtime/helpers/esm/createClass.js",
+            "./node_modules/react-transition-group/esm/TransitionGroupContext.js",
+            "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
+            "./node_modules/@material-ui/core/esm/styles/defaultTheme.js + 21 modules",
+            "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules",
+            "./node_modules/axios/lib/defaults.js",
+            "./node_modules/@material-ui/core/esm/styles/zIndex.js",
+            "./node_modules/react-is/index.js",
+            "./node_modules/axios/lib/helpers/bind.js",
+            "./node_modules/axios/lib/helpers/buildURL.js",
+            "./node_modules/process/browser.js",
+            "./node_modules/axios/lib/core/enhanceError.js",
+            "./node_modules/axios/lib/adapters/xhr.js",
+            "./node_modules/axios/lib/core/createError.js",
+            "./node_modules/axios/lib/cancel/isCancel.js",
+            "./node_modules/axios/lib/core/mergeConfig.js",
+            "./node_modules/axios/lib/cancel/Cancel.js",
+            "./node_modules/axios/index.js",
+            "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+            "./node_modules/@material-ui/utils/esm/formatMuiErrorMessage.js",
+            "./node_modules/axios/lib/axios.js",
+            "./node_modules/axios/lib/core/Axios.js",
+            "./node_modules/axios/lib/core/InterceptorManager.js",
+            "./node_modules/axios/lib/core/dispatchRequest.js",
+            "./node_modules/axios/lib/core/transformData.js",
+            "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+            "./node_modules/axios/lib/core/settle.js",
+            "./node_modules/axios/lib/helpers/cookies.js",
+            "./node_modules/axios/lib/core/buildFullPath.js",
+            "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+            "./node_modules/axios/lib/helpers/combineURLs.js",
+            "./node_modules/axios/lib/helpers/parseHeaders.js",
+            "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+            "./node_modules/axios/lib/helpers/validator.js",
+            "./node_modules/axios/package.json",
+            "./node_modules/axios/lib/cancel/CancelToken.js",
+            "./node_modules/axios/lib/helpers/spread.js",
+            "./node_modules/axios/lib/helpers/isAxiosError.js",
+            "./node_modules/prop-types/factoryWithThrowingShims.js",
+            "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+            "./node_modules/react-is/cjs/react-is.production.min.js",
+            "./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/resolve-url-loader??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./your-extensions/widgets/simple/src/runtime/Login.css",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/@material-ui/styles/esm/mergeClasses/mergeClasses.js",
+            "./node_modules/@material-ui/utils/esm/deepmerge.js",
+            "./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js",
+            "./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 20 modules",
+            "./node_modules/@material-ui/core/esm/Button/Button.js + 6 modules",
+            "./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules"
+          ]
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "warnings": [
+    "./your-extensions/widgets/ProductList/src/runtime/components/Extent.tsx 21:20-41\n\"export 'CognitoIdentityClient' was not found in '@aws-sdk/client-cognito-identity-provider'\n    at HarmonyImportSpecifierDependency._getErrors (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\dependencies\\HarmonyImportSpecifierDependency.js:109:11)\n    at HarmonyImportSpecifierDependency.getWarnings (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\dependencies\\HarmonyImportSpecifierDependency.js:60:15)\n    at Compilation.reportDependencyErrorsAndWarnings (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1454:24)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1258:10\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:24:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at Compilation.finish (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1253:28)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compiler.js:672:17\n    at _done (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:9:1)\n    at eval (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:68:22)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1185:12\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1097:9\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)\n @ ./your-extensions/widgets/ProductList/src/runtime/widget.tsx",
+    "./your-extensions/widgets/ProductList/src/runtime/components/Extent.tsx 20:17-40\n\"export 'fromCognitoIdentityPool' was not found in '@aws-sdk/client-cognito-identity-provider'\n    at HarmonyImportSpecifierDependency._getErrors (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\dependencies\\HarmonyImportSpecifierDependency.js:109:11)\n    at HarmonyImportSpecifierDependency.getWarnings (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\dependencies\\HarmonyImportSpecifierDependency.js:60:15)\n    at Compilation.reportDependencyErrorsAndWarnings (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1454:24)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1258:10\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:24:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at Compilation.finish (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1253:28)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compiler.js:672:17\n    at _done (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:9:1)\n    at eval (eval at create (C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:68:22)\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1185:12\n    at C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\node_modules\\webpack\\lib\\Compilation.js:1097:9\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)\n @ ./your-extensions/widgets/ProductList/src/runtime/widget.tsx"
+  ],
+  "outputPath": "C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\dist",
+  "publicPath": "",
+  "version": "4.46.0"
+}

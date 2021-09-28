@@ -1,0 +1,30 @@
+<svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<rect x="14" y="64.2222" width="6" height="35.7778" fill="#444444"/>
+<rect x="14" y="38.6667" width="6" height="25.5556" fill="#6A6A6A"/>
+<rect x="26" y="71.676" width="6" height="28.3241" fill="#444444"/>
+<rect x="26" y="51.4445" width="6" height="20.2315" fill="#6A6A6A"/>
+<rect x="38" y="78.3843" width="6" height="21.6157" fill="#444444"/>
+<rect x="38" y="62.9445" width="6" height="15.4398" fill="#6A6A6A"/>
+<rect x="50" y="83.6019" width="6" height="16.3981" fill="#444444"/>
+<rect x="50" y="71.8889" width="6" height="11.713" fill="#6A6A6A"/>
+<rect x="62" y="78.3843" width="6" height="21.6157" fill="#444444"/>
+<rect x="62" y="62.9445" width="6" height="15.4398" fill="#6A6A6A"/>
+<rect x="74" y="81.3657" width="6" height="18.6343" fill="#444444"/>
+<rect x="74" y="68.0555" width="6" height="13.3102" fill="#6A6A6A"/>
+<rect x="86" y="82.1111" width="6" height="17.8889" fill="#444444"/>
+<rect x="86" y="69.3333" width="6" height="12.7778" fill="#6A6A6A"/>
+<path d="M8 8V100H100" stroke="#444444"/>
+</g>
+<defs>
+<filter id="filter0_d" x="-4" y="0" width="116" height="116" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

@@ -24,9 +24,9 @@
             "left": "50.0%",
             "right": "0.9%",
             "top": "1.7%",
-            "bottom": "49.6%",
+            "bottom": "48.0%",
             "width": "49.1%",
-            "height": "48.7%"
+            "height": "50.3%"
           },
           "widgetId": "widget_146",
           "isPending": false,
@@ -69,11 +69,11 @@
         "3": {
           "type": "WIDGET",
           "bbox": {
-            "left": "1.0%",
+            "left": "25.5%",
             "right": "50.0%",
             "top": "52.2%",
             "bottom": "1.7%",
-            "width": "49.0%",
+            "width": "24.5%",
             "height": "46.1%"
           },
           "widgetId": "widget_204",
@@ -92,12 +92,12 @@
         "4": {
           "type": "WIDGET",
           "bbox": {
-            "left": "1.0%",
-            "right": "50.0%",
-            "top": "1.8%",
-            "bottom": "49.5%",
-            "width": "49.0%",
-            "height": "48.7%"
+            "left": "0.0%",
+            "right": "74.5%",
+            "top": "0.0%",
+            "bottom": "47.8%",
+            "width": "25.5%",
+            "height": "52.2%"
           },
           "widgetId": "widget_206",
           "setting": {
@@ -108,13 +108,62 @@
               "bottom": true
             }
           }
+        },
+        "5": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "right": true,
+              "left": false,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "74.5%",
+            "top": "52.2%",
+            "bottom": "0.0%",
+            "width": "25.5%",
+            "height": "47.8%"
+          },
+          "widgetId": "widget_207",
+          "isPending": false
+        },
+        "6": {
+          "sectionId": "section_1",
+          "type": "SECTION",
+          "bbox": {
+            "left": "25.5%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "74.5%",
+            "height": "100.0%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": true,
+              "right": false,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
         }
       },
       "order": [
         "1",
         "2",
         "3",
-        "4"
+        "4",
+        "5",
+        "6"
       ],
       "parent": {
         "type": "pages",
@@ -269,7 +318,6 @@
     "layout_33": {
       "type": "ROW",
       "order": [
-        "2",
         "1"
       ],
       "content": {
@@ -286,19 +334,6 @@
           },
           "parent": "layout_33",
           "isPending": true
-        },
-        "2": {
-          "type": "WIDGET",
-          "bbox": {
-            "left": 0,
-            "width": 12,
-            "height": "400px"
-          },
-          "widgetId": "widget_198",
-          "setting": {
-            "heightMode": "fit"
-          },
-          "parent": "layout_33"
         }
       },
       "parent": {
@@ -371,25 +406,8 @@
     },
     "layout_43": {
       "type": "ROW",
-      "content": {
-        "0": {
-          "type": "WIDGET",
-          "setting": {
-            "style": {},
-            "heightMode": "fit"
-          },
-          "bbox": {
-            "left": 0,
-            "width": 12,
-            "height": "307px"
-          },
-          "widgetId": "widget_203",
-          "parent": "layout_43"
-        }
-      },
-      "order": [
-        "0"
-      ],
+      "content": {},
+      "order": [],
       "parent": {
         "type": "widget",
         "id": "widget_165"
@@ -402,7 +420,9 @@
         "type": "widget",
         "id": "widget_198"
       },
-      "label": "Map FixedLayout"
+      "label": "Map FixedLayout",
+      "content": {},
+      "order": []
     },
     "layout_100": {
       "type": "FIXED",
@@ -411,52 +431,21 @@
     "layout_101": {
       "type": "ROW",
       "label": "Default",
-      "order": [
-        "0"
-      ],
-      "content": {
-        "0": {
-          "type": "WIDGET",
-          "bbox": {
-            "left": 0,
-            "width": 12,
-            "height": "300.00px"
-          },
-          "widgetId": "widget_205",
-          "setting": {
-            "heightMode": "fit",
-            "autoProps": {
-              "height": "STRETCH"
-            }
-          }
-        }
-      }
+      "order": [],
+      "content": {}
     },
     "layout_102": {
       "type": "ROW",
       "label": "Default",
       "order": [
-        "0",
         "1"
       ],
       "content": {
-        "0": {
-          "type": "WIDGET",
-          "bbox": {
-            "left": 0,
-            "width": 7,
-            "height": "340px"
-          },
-          "widgetId": "widget_207",
-          "setting": {
-            "heightMode": "fit"
-          }
-        },
         "1": {
           "type": "WIDGET",
           "bbox": {
-            "left": "7px",
-            "width": "5px",
+            "left": 0,
+            "width": 12,
             "height": "275px"
           },
           "widgetId": "widget_208",
@@ -645,6 +634,100 @@
       "order": [
         "0",
         "1"
+      ]
+    },
+    "layout_109": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "right": true,
+              "left": false,
+              "top": false,
+              "bottom": true
+            },
+            "vCenter": false,
+            "hCenter": false,
+            "lockParent": true
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.1%",
+            "width": "100.0%",
+            "height": "99.9%"
+          },
+          "widgetId": "widget_205",
+          "isPending": false
+        }
+      },
+      "order": [
+        "0"
+      ]
+    },
+    "layout_110": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "right": false,
+              "left": true,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "100.0%",
+            "height": "100.0%"
+          },
+          "widgetId": "widget_203",
+          "isPending": false
+        }
+      },
+      "order": [
+        "0"
+      ]
+    },
+    "layout_111": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "right": false,
+              "left": true,
+              "top": true,
+              "bottom": false
+            }
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "100.0%",
+            "height": "100.0%"
+          },
+          "widgetId": "widget_198"
+        }
+      },
+      "order": [
+        "0"
       ]
     }
   },
@@ -1012,7 +1095,9 @@
           "canSearch": true,
           "canNavigation": true
         },
-        "isUseCustomMapState": false
+        "isUseCustomMapState": false,
+        "initialMapDataSourceID": "dataSource_3",
+        "initialMapState": null
       },
       "id": "widget_198",
       "layouts": {
@@ -1040,6 +1125,10 @@
         {
           "dataSourceId": "dataSource_1",
           "mainDataSourceId": "dataSource_1"
+        },
+        {
+          "dataSourceId": "dataSource_3",
+          "mainDataSourceId": "dataSource_3"
         }
       ]
     },
@@ -1054,7 +1143,9 @@
           "canSearch": true,
           "canNavigation": true
         },
-        "isUseCustomMapState": false
+        "isUseCustomMapState": false,
+        "initialMapDataSourceID": "dataSource_4",
+        "initialMapState": null
       },
       "id": "widget_203",
       "layouts": {
@@ -1066,6 +1157,10 @@
         {
           "dataSourceId": "dataSource_2",
           "mainDataSourceId": "dataSource_2"
+        },
+        {
+          "dataSourceId": "dataSource_4",
+          "mainDataSourceId": "dataSource_4"
         }
       ]
     },
@@ -1109,7 +1204,15 @@
           "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
           "rootDataSourceId": "dataSource_1"
         }
-      ]
+      ],
+      "style": {
+        "borderRadius": {
+          "number": [
+            0
+          ],
+          "unit": "px"
+        }
+      }
     },
     "widget_206": {
       "uri": "widgets/layout/row/",
@@ -1238,7 +1341,9 @@
         "style": {
           "id": "default"
         },
-        "filters": null
+        "filters": null,
+        "sqlExprObj": null,
+        "sortFields": null
       },
       "id": "widget_208",
       "layouts": {
@@ -1255,12 +1360,13 @@
       "useDataSourcesEnabled": true,
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "rootDataSourceId": "dataSource_1",
+          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "rootDataSourceId": "dataSource_3",
           "fields": []
         }
-      ]
+      ],
+      "outputDataSources": []
     },
     "widget_212": {
       "uri": "widgets/common/text/",
@@ -1279,12 +1385,9 @@
       "id": "widget_212",
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "rootDataSourceId": "dataSource_1",
-          "fields": [
-            "sdsFeatureName"
-          ]
+          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "rootDataSourceId": "dataSource_3"
         }
       ],
       "useDataSourcesEnabled": true
@@ -1312,17 +1415,56 @@
       "id": "widget_213",
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
-          "rootDataSourceId": "dataSource_1"
+          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
+          "rootDataSourceId": "dataSource_3"
         }
       ],
       "useDataSourcesEnabled": true
     }
   },
   "widgetsManifest": {},
-  "views": {},
-  "sections": {},
+  "views": {
+    "view_1": {
+      "id": "view_1",
+      "label": "View 1",
+      "layout": {
+        "LARGE": "layout_109"
+      }
+    },
+    "view_2": {
+      "id": "view_2",
+      "label": "View 2",
+      "layout": {
+        "LARGE": "layout_110"
+      }
+    },
+    "view_3": {
+      "id": "view_3",
+      "label": "View 3",
+      "layout": {
+        "LARGE": "layout_111"
+      }
+    }
+  },
+  "sections": {
+    "section_1": {
+      "id": "section_1",
+      "label": "Section 1",
+      "views": [
+        "view_3",
+        "view_1",
+        "view_2"
+      ],
+      "arrowsNav": {
+        "visible": false
+      },
+      "dotsNav": {
+        "visible": true,
+        "size": "15"
+      }
+    }
+  },
   "dialogs": {
     "dialog_1": {
       "id": "dialog_1",
@@ -1367,6 +1509,18 @@
       "itemId": "116a4d51ab5b477c9fc2a8634ee800e4",
       "id": "dataSource_2",
       "portalUrl": "https://esrinstallations.maps.arcgis.com"
+    },
+    "dataSource_3": {
+      "type": "WEB_MAP",
+      "itemId": "313fdd617b154d44b35ac37eb89aaf3d",
+      "id": "dataSource_3",
+      "portalUrl": "https://dodterrain.org/portal"
+    },
+    "dataSource_4": {
+      "type": "WEB_SCENE",
+      "itemId": "6f2c05ac779b4d4b88b9acf7a6b4e234",
+      "id": "dataSource_4",
+      "portalUrl": "https://dodterrain.org/portal"
     }
   },
   "messageConfigs": {
@@ -1424,7 +1578,7 @@
       "page_0": []
     }
   ],
-  "timestamp": 1629410453076,
+  "timestamp": 1630345892635,
   "header": {
     "layout": {
       "LARGE": "layout_24",
@@ -1440,14 +1594,11 @@
   },
   "customTheme": {
     "sharedThemeVariables": {
-      "header": {
-        "bg": "#004c73",
-        "color": "#ebebeb"
-      },
+      "header": {},
       "body": {},
       "button": {},
       "logo": {
-        "small": "https://esrinstallations.maps.arcgis.com/sharing/rest/content/items/b0b16ef2a891491fa95dfd2abec126a8/data"
+        "small": "https://dodterrain.org/portal/sharing/rest/content/items/5dcb21b51c9e40f98a4298caecdae691/data"
       }
     }
   }
