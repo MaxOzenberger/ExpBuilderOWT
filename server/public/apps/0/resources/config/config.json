@@ -1095,9 +1095,7 @@
           "canSearch": true,
           "canNavigation": true
         },
-        "isUseCustomMapState": false,
-        "initialMapDataSourceID": "dataSource_3",
-        "initialMapState": null
+        "isUseCustomMapState": false
       },
       "id": "widget_198",
       "layouts": {
@@ -1125,10 +1123,6 @@
         {
           "dataSourceId": "dataSource_1",
           "mainDataSourceId": "dataSource_1"
-        },
-        {
-          "dataSourceId": "dataSource_3",
-          "mainDataSourceId": "dataSource_3"
         }
       ]
     },
@@ -1143,9 +1137,7 @@
           "canSearch": true,
           "canNavigation": true
         },
-        "isUseCustomMapState": false,
-        "initialMapDataSourceID": "dataSource_4",
-        "initialMapState": null
+        "isUseCustomMapState": false
       },
       "id": "widget_203",
       "layouts": {
@@ -1157,10 +1149,6 @@
         {
           "dataSourceId": "dataSource_2",
           "mainDataSourceId": "dataSource_2"
-        },
-        {
-          "dataSourceId": "dataSource_4",
-          "mainDataSourceId": "dataSource_4"
         }
       ]
     },
@@ -1341,9 +1329,7 @@
         "style": {
           "id": "default"
         },
-        "filters": null,
-        "sqlExprObj": null,
-        "sortFields": null
+        "filters": null
       },
       "id": "widget_208",
       "layouts": {
@@ -1360,13 +1346,12 @@
       "useDataSourcesEnabled": true,
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "rootDataSourceId": "dataSource_3",
+          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "rootDataSourceId": "dataSource_1",
           "fields": []
         }
-      ],
-      "outputDataSources": []
+      ]
     },
     "widget_212": {
       "uri": "widgets/common/text/",
@@ -1385,9 +1370,12 @@
       "id": "widget_212",
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "rootDataSourceId": "dataSource_3"
+          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "rootDataSourceId": "dataSource_1",
+          "fields": [
+            "sdsFeatureName"
+          ]
         }
       ],
       "useDataSourcesEnabled": true
@@ -1415,9 +1403,9 @@
       "id": "widget_213",
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "mainDataSourceId": "dataSource_3-OWT_Holdings_2020_9125",
-          "rootDataSourceId": "dataSource_3"
+          "dataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "mainDataSourceId": "dataSource_1-FPLK_North_ManagementAreas_A_3566",
+          "rootDataSourceId": "dataSource_1"
         }
       ],
       "useDataSourcesEnabled": true
@@ -1509,18 +1497,6 @@
       "itemId": "116a4d51ab5b477c9fc2a8634ee800e4",
       "id": "dataSource_2",
       "portalUrl": "https://esrinstallations.maps.arcgis.com"
-    },
-    "dataSource_3": {
-      "type": "WEB_MAP",
-      "itemId": "313fdd617b154d44b35ac37eb89aaf3d",
-      "id": "dataSource_3",
-      "portalUrl": "https://dodterrain.org/portal"
-    },
-    "dataSource_4": {
-      "type": "WEB_SCENE",
-      "itemId": "6f2c05ac779b4d4b88b9acf7a6b4e234",
-      "id": "dataSource_4",
-      "portalUrl": "https://dodterrain.org/portal"
     }
   },
   "messageConfigs": {
@@ -1578,7 +1554,7 @@
       "page_0": []
     }
   ],
-  "timestamp": 1630345892635,
+  "timestamp": 1630346157229,
   "header": {
     "layout": {
       "LARGE": "layout_24",
@@ -1594,11 +1570,14 @@
   },
   "customTheme": {
     "sharedThemeVariables": {
-      "header": {},
+      "header": {
+        "bg": "#004c73",
+        "color": "#ebebeb"
+      },
       "body": {},
       "button": {},
       "logo": {
-        "small": "https://dodterrain.org/portal/sharing/rest/content/items/5dcb21b51c9e40f98a4298caecdae691/data"
+        "small": "https://esrinstallations.maps.arcgis.com/sharing/rest/content/items/b0b16ef2a891491fa95dfd2abec126a8/data"
       }
     }
   }

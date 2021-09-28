@@ -2,7 +2,7 @@
   "created": 1629291026354,
   "description": "",
   "id": "0",
-  "modified": 1630345895464,
+  "modified": 1630331758593,
   "owner": "MOzenberger_installations",
   "tags": [],
   "thumbnail": null,
@@ -16,7 +16,7 @@
     "status: Published",
     "version:1.5.0"
   ],
-  "portalUrl": "https://dodterrain.org/portal",
+  "portalUrl": "https://esrinstallations.maps.arcgis.com",
   "username": "MOzenberger_installations",
   "name": "I3S Cesium Dev",
   "isLocalApp": true,
