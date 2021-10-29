@@ -1,0 +1,149 @@
+{
+  "pages": {
+    "page_0": {
+      "id": "page_0",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_0"
+      },
+      "isDefault": true,
+      "isVisible": true,
+      "label": "Page 1"
+    }
+  },
+  "layouts": {
+    "layout_0": {
+      "type": "FIXED",
+      "content": {
+        "1": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "21.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "79.0%",
+            "height": "100.0%"
+          },
+          "widgetId": "widget_2",
+          "setting": {
+            "autoProps": {
+              "left": true,
+              "right": false,
+              "top": true,
+              "bottom": false
+            }
+          }
+        },
+        "2": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": false,
+              "bottom": true
+            }
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "80.2%",
+            "top": "0.0%",
+            "bottom": "28.7%",
+            "width": "19.8%",
+            "height": "71.3%"
+          },
+          "widgetId": "widget_3"
+        }
+      },
+      "order": [
+        "1",
+        "2"
+      ]
+    },
+    "layout_1": {
+      "type": "FIXED",
+      "label": "Map FixedLayout",
+      "order": [],
+      "content": {}
+    }
+  },
+  "exbVersion": "1.5.0",
+  "mainSizeMode": "LARGE",
+  "theme": "themes/default/",
+  "forBuilderAttributes": {
+    "lockLayout": false
+  },
+  "template": "blankfullscreen",
+  "attributes": {
+    "portalUrl": "https://dodterrain.org/portal"
+  },
+  "customTheme": {
+    "sharedThemeVariables": {
+      "header": {},
+      "body": {},
+      "button": {},
+      "logo": {
+        "small": "https://dodterrain.org/portal/sharing/rest/content/items/5dcb21b51c9e40f98a4298caecdae691/data"
+      }
+    }
+  },
+  "widgets": {
+    "widget_2": {
+      "uri": "widgets/arcgis/arcgis-map/",
+      "version": "1.5.0",
+      "label": "Map 1",
+      "config": {
+        "toolConifg": {
+          "canZoom": true,
+          "canHome": true,
+          "canSearch": true,
+          "canNavigation": true
+        },
+        "isUseCustomMapState": false
+      },
+      "id": "widget_2",
+      "layouts": {
+        "MapFixedLayout": {
+          "LARGE": "layout_1"
+        }
+      },
+      "useDataSources": [
+        {
+          "dataSourceId": "dataSource_1",
+          "mainDataSourceId": "dataSource_1"
+        }
+      ]
+    },
+    "widget_3": {
+      "uri": "widgets/ProductList/",
+      "version": "1.5.0",
+      "label": "ProductList 1",
+      "config": {
+        "exampleConfigProperty": "test"
+      },
+      "id": "widget_3"
+    }
+  },
+  "widgetsManifest": {},
+  "views": {},
+  "sections": {},
+  "dialogs": {},
+  "dataSources": {
+    "dataSource_1": {
+      "type": "WEB_MAP",
+      "itemId": "313fdd617b154d44b35ac37eb89aaf3d",
+      "id": "dataSource_1",
+      "portalUrl": "https://dodterrain.org/portal"
+    }
+  },
+  "messageConfigs": {},
+  "pageStructure": [
+    {
+      "page_0": []
+    }
+  ],
+  "timestamp": 1632962847572
+}

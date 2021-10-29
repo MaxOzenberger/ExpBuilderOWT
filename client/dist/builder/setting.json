@@ -1,8 +1,9 @@
 {
   "env": {
     "prod": {
-      "portalUrl": "https://www.arcgis.com",
-      "clientId": "experienceBuilder"
+      "portalUrl": "https://dodterrain.org/portal",
+      "clientId": "D7ReaIeDR9s7aqtR",
+      "isWebTier": false
     }
   },
   "devEnv": {

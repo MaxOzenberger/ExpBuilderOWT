@@ -1,20 +1,11 @@
 /** @jsx jsx */
-import {React, AllWidgetProps,  jsx } from 'jimu-core';
-import { IMConfig } from '../config';
+import {jsx} from 'jimu-core';
+import "./Login.css";
+import Login from './components/Login';
 
-export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
-  constructor(props) {
-    super(props);
+export default function LoginWidget() {
 
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="widget-demo jimu-widget m-2">
-        <p>Simple Widget</p>
-        <p>exampleConfigProperty: {this.props.config.exampleConfigProperty}</p>
-      </div>
-    );
-  }
+  return (
+        <Login />
+  );
 }

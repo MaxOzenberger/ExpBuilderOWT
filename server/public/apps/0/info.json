@@ -2,11 +2,11 @@
   "created": 1629291026354,
   "description": "",
   "id": "0",
-  "modified": 1630331758593,
-  "owner": "MOzenberger_installations",
+  "modified": 1635445777115,
+  "owner": "mozenberger",
   "tags": [],
   "thumbnail": null,
-  "title": "I3S Cesium Dev",
+  "title": "STEWS API Integration",
   "type": "Web Experience",
   "snippet": "",
   "typeKeywords": [
@@ -16,9 +16,9 @@
     "status: Published",
     "version:1.5.0"
   ],
-  "portalUrl": "https://esrinstallations.maps.arcgis.com",
-  "username": "MOzenberger_installations",
-  "name": "I3S Cesium Dev",
+  "portalUrl": "https://dodterrain.org/portal",
+  "username": "mozenberger",
+  "name": "STEWS API Integration",
   "isLocalApp": true,
   "url": null
 }

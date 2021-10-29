@@ -1,24 +1,23 @@
 {
-  "created": 1629291026354,
+  "created": 1631811805672,
   "description": "",
-  "id": "0",
-  "modified": 1630331758593,
-  "owner": "MOzenberger_installations",
+  "id": "1",
+  "modified": 1632429478242,
+  "owner": "kmercy",
   "tags": [],
   "thumbnail": null,
-  "title": "I3S Cesium Dev",
+  "title": "Untitled experience 1",
   "type": "Web Experience",
   "snippet": "",
   "typeKeywords": [
     "EXB Experience",
     "Ready To Use",
     "JavaScript",
-    "status: Published",
+    "status: Draft",
     "version:1.5.0"
   ],
-  "portalUrl": "https://esrinstallations.maps.arcgis.com",
-  "username": "MOzenberger_installations",
-  "name": "I3S Cesium Dev",
-  "isLocalApp": true,
-  "url": null
+  "portalUrl": "https://dodterrain.org/portal",
+  "username": "kmercy",
+  "name": "Untitled experience 1",
+  "isLocalApp": true
 }

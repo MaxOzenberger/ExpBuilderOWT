@@ -4441,6 +4441,90 @@
     "group": 9
   },
   {
+    "name": "get-map-coordinates",
+    "manifest": {
+      "name": "get-map-coordinates",
+      "type": "widget",
+      "version": "1.5.0",
+      "dependency": "jimu-arcgis",
+      "exbVersion": "1.5.0",
+      "author": "Your Name",
+      "description": "A hello world starter widget",
+      "copyright": "",
+      "license": "",
+      "properties": {},
+      "translatedLocales": [
+        "en"
+      ],
+      "defaultSize": {
+        "width": 800,
+        "height": 500
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/get-map-coordinates/",
+    "icon": "widgets/get-map-coordinates/icon.png",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "ProductList",
+    "manifest": {
+      "name": "ProductList",
+      "type": "widget",
+      "version": "1.5.0",
+      "exbVersion": "1.5.0",
+      "author": "Esri R&D Center Beijing",
+      "description": "This is a barebones, simple widget. It includes an example of how to use the config file, and it includes a placeholder SVG icon. It intentionally does not include the following so you can use this to start from scratch: i18n translations, a Settings panel, unit tests. See the documentation for more information on how to implement these features.",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "properties": {},
+      "translatedLocales": [
+        "en"
+      ],
+      "defaultSize": {
+        "width": 800,
+        "height": 500
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/ProductList/",
+    "icon": "widgets/ProductList/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "showextent",
+    "manifest": {
+      "name": "showextent",
+      "label": "Show Extent",
+      "type": "widget",
+      "version": "1.6.0",
+      "exbVersion": "1.6.0",
+      "author": "Esri R&D Center Beijing",
+      "description": "This is the widget used in developer documentation",
+      "copyright": "",
+      "dependency": "jimu-arcgis",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "properties": {},
+      "translatedLocales": [
+        "en"
+      ],
+      "defaultSize": {
+        "width": 400,
+        "height": 400
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/showextent/",
+    "icon": "widgets/showextent/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
     "name": "simple",
     "manifest": {
       "name": "simple",

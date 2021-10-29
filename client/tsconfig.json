@@ -3,6 +3,7 @@
   "buildOnSave": false,
   "compilerOptions": {
     "sourceMap": true,
+    "allowJs": true,
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es6",

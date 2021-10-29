@@ -1,7 +1,13 @@
 [
   {
-    "portalUrl": "https://esrinstallations.maps.arcgis.com",
-    "clientId": "qWgWhRxcsbizHuC2",
+    "portalUrl": "https://geoacuity.maps.arcgis.com",
+    "clientId": "Gzvbo8jDuPE2Bs0l",
+    "supportsOAuth": true,
+    "isWebTier": false
+  },
+  {
+    "portalUrl": "https://li4vzyakql0gvyu8.maps.arcgis.com",
+    "clientId": "Gzvbo8jDuPE2Bs0l",
     "supportsOAuth": true,
     "isWebTier": false
   },

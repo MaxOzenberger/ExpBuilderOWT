@@ -1,0 +1,27 @@
+{
+  "created": 1633962370045,
+  "description": "",
+  "id": "4",
+  "modified": 1633962396109,
+  "owner": "siteadmin",
+  "tags": [],
+  "thumbnail": null,
+  "title": "KevinDevExperience 2 copy",
+  "type": "Web Experience",
+  "snippet": "",
+  "typeKeywords": [
+    "EXB Experience",
+    "Ready To Use",
+    "JavaScript",
+    "status: Draft",
+    "version:1.5.0",
+    "version:1.5.0"
+  ],
+  "portalUrl": "https://dodterrain.org/portal",
+  "username": "siteadmin",
+  "isLocalApp": true,
+  "userRole": "org_admin",
+  "success": true,
+  "text": "",
+  "clearEmptyFields": true
+}
