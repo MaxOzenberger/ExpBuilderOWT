@@ -9,6 +9,7 @@
           ],
           "modules": [
             "./your-extensions/widgets/get-map-coordinates/src/runtime/widget.tsx + 3 modules",
+            "external \"esri/layers/FeatureLayer\"",
             "external \"esri/geometry/SpatialReference\"",
             "external \"esri/geometry/projection\"",
             "external \"esri/Graphic\"",

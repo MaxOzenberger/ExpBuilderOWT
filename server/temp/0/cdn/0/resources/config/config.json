@@ -105,10 +105,10 @@
           "bbox": {
             "left": "0.0%",
             "right": "74.5%",
-            "top": "52.2%",
+            "top": "66.7%",
             "bottom": "0.0%",
             "width": "25.5%",
-            "height": "47.8%"
+            "height": "33.3%"
           },
           "widgetId": "widget_207",
           "isPending": false
@@ -152,8 +152,8 @@
           "bbox": {
             "left": "1.0%",
             "right": "75.5%",
-            "top": "1.5%",
-            "bottom": "49.2%",
+            "top": "2.3%",
+            "bottom": "48.4%",
             "width": "23.5%",
             "height": "49.3%"
           },
@@ -183,9 +183,33 @@
           },
           "widgetId": "widget_222",
           "isPending": false
+        },
+        "9": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "0.0%",
+            "right": "74.6%",
+            "top": "52.2%",
+            "bottom": "33.3%",
+            "width": "25.4%",
+            "height": "14.5%"
+          },
+          "widgetId": "widget_223",
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
         }
       },
       "order": [
+        "9",
         "1",
         "2",
         "3",
@@ -566,7 +590,7 @@
   "mainSizeMode": "LARGE",
   "theme": "themes/ink/",
   "forBuilderAttributes": {
-    "lockLayout": false,
+    "lockLayout": true,
     "viewPortSize": {
       "LARGE": {
         "width": 1280,
@@ -913,11 +937,14 @@
           "canZoom": true,
           "canHome": true,
           "canSearch": true,
-          "canNavigation": true
+          "canNavigation": true,
+          "canMeasure": true,
+          "canBaseMap": true
         },
         "isUseCustomMapState": false,
-        "initialMapDataSourceID": "dataSource_2",
-        "initialMapState": null
+        "initialMapDataSourceID": "dataSource_3",
+        "initialMapState": null,
+        "sceneQualityMode": "medium"
       },
       "id": "widget_203",
       "layouts": {
@@ -927,8 +954,8 @@
       },
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_2",
-          "mainDataSourceId": "dataSource_2"
+          "dataSourceId": "dataSource_3",
+          "mainDataSourceId": "dataSource_3"
         }
       ]
     },
@@ -959,10 +986,11 @@
       "version": "1.5.0",
       "label": "Embed 1",
       "config": {
-        "embedType": "url",
+        "embedType": "code",
         "expression": "<p>https://cesium.com/cesiumjs/cesium-viewer/?view=-93.1209996646908%2C31.10522460939454%2C3679.4430627060965%2C360%2C-89.9999928568172%2C0</p>",
         "enableLabel": false,
-        "embedCode": "<iframe src=\"https://cesium.com/cesiumjs/cesium-viewer/?view=-93.1209996646908%2C31.10522460939454%2C3679.4430627060965%2C360%2C-89.9999928568172%2C0\" style=\"width:100%;height:100%\"></iframe>"
+        "embedCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/cesium/1.87.0/Cesium.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\n  <style>\n      @import url(https://cdnjs.cloudflare.com/ajax/libs/cesium/1.87.0/Widgets/widgets.min.css);\n      #cesiumContainer {\n          width: 100%; height: 100%; position: absolute; top:73px; left: 0px; overflow: hidden;z-index: 10000;\n      }\n      .cesium-credit-expand-link {\n          display: none !important;\n      }\n      #toolbar {\n        background: rgba(42, 42, 42, 0.8);\n        padding: 4px;\n        border-radius: 4px;\n        z-index: 10001;\n        position: absolute;\n        left: 3px;\n      }\n      #toolbar input {\n          vertical-align: middle;\n          padding-top: 2px;\n          padding-bottom: 2px;\n      }\n  </style>\n<div id=\"cesiumContainer\"></div>\n  <div id=\"toolbar\">\n    <div class=\"text-white\">Height</div>\n    <input type=\"range\" min=\"-100.0\" max=\"100.0\" step=\"1\" data-bind=\"value: height, valueUpdate: 'input'\">\n    <input type=\"text\" size=\"5\" data-bind=\"value: height\">\n  </div>\n  <script>\n    api_key = 'Aj8gCfHeO3jccMNp3yIp5NTMMajvAzutj4hYUAwuAHaOj4R5crituZmItRWopHdZ';\n    var tilesets = [];\n    var height = 0;\n\n    // Create terrain view models\n    var imageryViewModels = [];\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'ESRI\\u00adWorld\\u00adImagery',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/esriWorldImagery.png'),\n        tooltip : 'ArcGIS Map',\n        creationFunction : function() { \n            return new Cesium.ArcGisMapServerImageryProvider({\n              url : 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'\n            });\n        }\n    }));\n\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'Open\\u00adStreet\\u00adMap',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/openStreetMap.png'),\n        tooltip : 'OpenStreetMap (OSM) is a collaborative project to create a free editable \\\n    map of the world.\\nhttp://www.openstreetmap.org',\n        creationFunction : function() {\n            return new Cesium.OpenStreetMapImageryProvider({\n                url : 'https://a.tile.openstreetmap.org/'\n            });\n        }\n    }));\n\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'Natural Earth\\u00a0II',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/naturalEarthII.png'),\n        tooltip : 'Natural Earth II, darkened for contrast.\\nhttp://www.naturalearthdata.com/',\n        creationFunction : function() {\n            return new Cesium.TileMapServiceImageryProvider({\n                url : Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')\n            });\n        }\n    }));\n\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'Bing\\u00a0Imagery\\u00a0Aerial',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/bingAerial.png'),\n        tooltip : 'Aerial Imagery Using Bing.',\n        creationFunction : function() {\n            return new Cesium.BingMapsImageryProvider({\n                url : 'https://dev.virtualearth.net',\n                key : api_key,\n                mapStyle : Cesium.BingMapsStyle.AERIAL\n            });\n        }\n    }));\n\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'Bing\\u00a0Imagery\\u00a0Road',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/bingRoads.png'),\n        tooltip : 'Aerial Imagery Using Bing with roads.',\n        creationFunction : function() {\n            return new Cesium.BingMapsImageryProvider({\n                url : 'https://dev.virtualearth.net',\n                key : api_key,\n                mapStyle : Cesium.BingMapsStyle.ROAD\n            });\n        }\n    }));\n\n    imageryViewModels.push(new Cesium.ProviderViewModel({\n        name : 'Bing\\u00a0Imagery\\u00a0Aerial\\u00a0Labelled',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/bingAerialLabels.png'),\n        tooltip : 'Aerial Imagery Using Bing with labels.',\n        creationFunction : function() {\n            return new Cesium.BingMapsImageryProvider({\n                url : 'https://dev.virtualearth.net',\n                key : api_key,\n                mapStyle : Cesium.BingMapsStyle.AERIAL_WITH_LABELS\n            });\n        }\n    }));\n\n    // Create terrain view models\n    var terrainViewModels = [];\n    terrainViewModels.push(new Cesium.ProviderViewModel({\n        name : 'WGS84\\u00a0Ellipsoid',\n        iconUrl : Cesium.buildModuleUrl('Widgets/Images/TerrainProviders/Ellipsoid.png'),\n        tooltip : 'WGS84 standard ellipsoid, also known as EPSG:4326',\n        creationFunction : function() {\n            return new Cesium.EllipsoidTerrainProvider();\n        }\n    }));\n\n    // Create viewer.\n    var viewer = new Cesium.Viewer('cesiumContainer', {\n        imageryProviderViewModels: imageryViewModels,\n        selectedImageryProviderViewModel: imageryViewModels[0],\n        terrainProviderViewModels: terrainViewModels,\n        selectedTerrainProviderViewModel: terrainViewModels[0],\n        timeline: false,\n        animation: false,\n    });\n\n    // Remove ion logo\n    viewer._cesiumWidget._creditContainer.parentNode.removeChild(\n        viewer._cesiumWidget._creditContainer\n    );\n\n    viewer.scene.globe.depthTestAgainstTerrain = false\n    // Point to resource(s).\n    var resource_urls = ['https://grid.nga.mil/grid/api/product/stream/139441/?access_token=EPqvOZPXR4S3RTFVxJ0k7fovw0AdVn'];\n    for (i = 0; i < resource_urls.length; i++) {\n      var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({url : resource_urls[i]}));\n      tilesets.push(tileset);\n      // Adjust tileset height on load.\n      // tileset.readyPromise.then(function() {\n        // var cart = Cesium.Cartographic.fromCartesian(tileset.boundingSphere.center)\n        // var bounding = tilesets[0]._root._boundingVolume;\n        // var center = bounding.boundingSphere.center;\n        // var cart = Cesium.Cartographic.fromCartesian(center)\n        // var promise = Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [cart]);\n        // Cesium.when(promise, function(updatedPositions) {\n        //   var cartographic = Cesium.Cartographic.fromCartesian(tilesets[0].boundingSphere.center);\n        //   test = updatedPositions;\n        //   var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, cartographic.height);\n        //   var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, updatedPositions[0].height);\n        //   var translation = Cesium.Cartesian3.subtract(offset, surface, new Cesium.Cartesian3());\n        //   height = updatedPositions[0].height - cartographic.height;\n        //   console.log(height);\n        //   tileset.modelMatrix = Cesium.Matrix4.fromTranslation(translation);\n      //   });\n      // });\n    }\n\n    // Adjust tile height on load.\n    // for (i = 0; i < tilesets.length; i++) {\n    //   tilesets[i].tileLoad.addEventListener(function(tile) {\n    //     // Position tile\n    //     var cartographic = Cesium.Cartographic.fromCartesian(tile.boundingSphere.center);\n    //     var promise = Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [cartographic]);\n    //     Cesium.when(promise, function (updatedPositions) {\n    //       var cartographic = Cesium.Cartographic.fromCartesian(tile.boundingSphere.center);\n    //       var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, cartographic.height);\n    //       var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, updatedPositions[0].height);\n    //       var translation = Cesium.Cartesian3.subtract(offset, surface, new Cesium.Cartesian3());\n    //       tile.modelMatrix = Cesium.Matrix4.fromTranslation(translation);\n    //     });\n    //   });\n    // }\n\n    // Zoom to data location.\n    tilesets[0].readyPromise.then(function() {\n      var bounding = tilesets[0]._root._boundingVolume;\n      var center = bounding.boundingSphere.center;\n      var cart = Cesium.Cartographic.fromCartesian(center)\n      var dest = Cesium.Cartesian3.fromDegrees(\n              cart.longitude * (180 / Math.PI),\n              cart.latitude * (180 / Math.PI),\n              bounding._boundingSphere.radius * 2.2);\n\n      viewer.camera.setView({  destination : Cesium.Rectangle.fromDegrees (-97.9323501716407, 31.1126498764209, -97.6517124476951, 31.284131362282) });\n    });\n\n    // Create and attach Height toolbar.\n    var viewModel = {\n        height: Number(height)\n    };\n\n    Cesium.knockout.track(viewModel);\n\n    var toolbar = document.getElementById('toolbar');\n    Cesium.knockout.applyBindings(viewModel, toolbar);\n\n    Cesium.knockout.getObservable(viewModel, 'height').subscribe(function(height) {\n        height = Number(height);\n        if (isNaN(height)) {\n            return;\n        }\n        for (i = 0; i < tilesets.length; i++) {\n          var tileset = tilesets[i];\n          var cartographic = Cesium.Cartographic.fromCartesian(tileset.boundingSphere.center);\n          var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, 0.0);\n          var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, height);\n          var translation = Cesium.Cartesian3.subtract(offset, surface, new Cesium.Cartesian3());\n          tileset.modelMatrix = Cesium.Matrix4.fromTranslation(translation);\n        }\n    });\n\n    // Resize properly.\n    var resizeIframe = function() {\n        $('#cesiumContainer').height($(window).height() - 96);\n    };\n\n    $(function() {\n      resizeIframe();\n\n      $(window).on(\"resize\", function() {\n        resizeIframe()\n      });\n    });\n  </script>",
+        "autoRefresh": false
       },
       "id": "widget_205",
       "useDataSourcesEnabled": true,
@@ -1009,9 +1037,9 @@
       "id": "widget_207",
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_1-OWT_2021_2822",
-          "mainDataSourceId": "dataSource_1-OWT_2021_2822",
-          "rootDataSourceId": "dataSource_1"
+          "dataSourceId": "dataSource_4-OWT_2021_update",
+          "mainDataSourceId": "dataSource_4-OWT_2021_update",
+          "rootDataSourceId": "dataSource_4"
         }
       ]
     },
@@ -1117,6 +1145,114 @@
           "offsetY": "0px",
           "blur": "0px",
           "spread": "0px"
+        }
+      }
+    },
+    "widget_223": {
+      "uri": "widgets/arcgis/coordinate-conversion/",
+      "version": "1.5.0",
+      "label": "Coordinate Conversion 1",
+      "config": {
+        "inputSettings": {
+          "defaultCoordinate": "mgrs",
+          "format": "Z S X Y"
+        },
+        "outputSettings": [
+          {
+            "name": "address",
+            "label": "Address",
+            "defaultPattern": "",
+            "currentPattern": "",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "dd",
+            "label": "DD",
+            "defaultPattern": "Y°‎N, X°‎E",
+            "currentPattern": "Y°‎N, X°‎E",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "ddm",
+            "label": "DDM",
+            "defaultPattern": "Y°‎ A'N, X°‎ B'E",
+            "currentPattern": "Y°‎ A'N, X°‎ B'E",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "dms",
+            "label": "DMS",
+            "defaultPattern": "Y°‎ A' B\"N, X°‎ C' D\"E",
+            "currentPattern": "Y°‎ A' B\"N, X°‎ C' D\"E",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "xy",
+            "label": "Long-Lat",
+            "defaultPattern": "X°‎, Y°‎",
+            "currentPattern": "X°‎, Y°‎",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "mgrs",
+            "label": "MGRS",
+            "defaultPattern": "Z S X Y",
+            "currentPattern": "Z S X Y",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "usng",
+            "label": "USNG",
+            "defaultPattern": "Z S X Y",
+            "currentPattern": "Z S X Y",
+            "enabled": true,
+            "isCustom": false
+          },
+          {
+            "name": "utm",
+            "label": "UTM",
+            "defaultPattern": "ZB X Y",
+            "currentPattern": "ZB X Y",
+            "enabled": true,
+            "isCustom": false
+          }
+        ],
+        "addressSettings": {
+          "minCandidateScore": 100,
+          "geocodeServiceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+        },
+        "generalSettings": {
+          "zoomScale": 50000,
+          "defaultPointSymbol": {
+            "type": "esriPMS",
+            "angle": 0,
+            "xoffset": 2,
+            "yoffset": 8,
+            "contentType": "image/png",
+            "imageData": "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",
+            "url": "https://static.arcgis.com/images/Symbols/Basic/BlueShinyPin.png",
+            "height": 24,
+            "width": 24
+          }
+        }
+      },
+      "id": "widget_223",
+      "useMapWidgetIds": [
+        "widget_198"
+      ],
+      "style": {
+        "background": {
+          "color": "var(--secondary-100)",
+          "fillType": "fit",
+          "image": {
+            "url": ""
+          }
         }
       }
     }
@@ -1225,64 +1361,28 @@
       "itemId": "6f2c05ac779b4d4b88b9acf7a6b4e234",
       "id": "dataSource_2",
       "portalUrl": "https://dodterrain.org/portal"
-    }
-  },
-  "messageConfigs": {
-    "messageConfig_1": {
-      "id": "messageConfig_1",
-      "widgetId": "widget_198",
-      "messageType": "EXTENT_CHANGE",
-      "actions": [
-        {
-          "actionId": "widget_203-panTo-1629291765152",
-          "widgetId": "widget_203",
-          "messageWidgetId": "widget_198",
-          "actionName": "panTo",
-          "description": null,
-          "version": "1.5.0"
-        },
-        {
-          "actionId": "widget_203-zoomToFeature-1629291768009",
-          "widgetId": "widget_203",
-          "messageWidgetId": "widget_198",
-          "actionName": "zoomToFeature",
-          "description": null,
-          "version": "1.5.0"
-        }
-      ]
     },
-    "messageConfig_2": {
-      "id": "messageConfig_2",
-      "widgetId": "widget_198",
-      "messageType": "DATA_RECORDS_SELECTION_CHANGE",
-      "actions": [
-        {
-          "actionId": "widget_203-filter-1629291785852",
-          "widgetId": "widget_203",
-          "messageWidgetId": "widget_198",
-          "actionName": "filter",
-          "description": null,
-          "config": {
-            "messageUseDataSource": null,
-            "actionUseDataSource": {
-              "dataSourceId": "dataSource_2-a8871f0859ab47328ac1fe2fe951e558",
-              "mainDataSourceId": "dataSource_2-a8871f0859ab47328ac1fe2fe951e558",
-              "rootDataSourceId": "dataSource_2"
-            },
-            "sqlExprObj": null,
-            "enabledDataRelationShip": true
-          },
-          "version": "1.5.0"
-        }
-      ]
+    "dataSource_3": {
+      "type": "WEB_SCENE",
+      "itemId": "eeaf64a7a38e46eeaaa3a2d089f16f85",
+      "id": "dataSource_3",
+      "portalUrl": "https://dodterrain.org/portal"
+    },
+    "dataSource_4": {
+      "id": "dataSource_4",
+      "type": "FEATURE_SERVICE",
+      "url": "https://dodterrain.org/server/rest/services/Hosted/OWT_2021/FeatureServer",
+      "portalUrl": "https://dodterrain.org/portal",
+      "itemId": "cff3d3db469a4a489850759bec64bfe6"
     }
   },
+  "messageConfigs": {},
   "pageStructure": [
     {
       "page_0": []
     }
   ],
-  "timestamp": 1635445775914,
+  "timestamp": 1636324475689,
   "header": {
     "layout": {
       "LARGE": "layout_24",

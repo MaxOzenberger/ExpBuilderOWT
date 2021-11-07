@@ -8,3 +8,6 @@
     bottom: 0;
     right: 0;
 };
+.esri-view-width-large .esri-popup__main-container {
+    max-height: 800px;
+}

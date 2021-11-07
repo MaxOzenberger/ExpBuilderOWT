@@ -27,7 +27,6 @@
     "@aws-sdk/client-s3": "^3.34.0",
     "@aws-sdk/credential-providers": "^3.34.0",
     "@aws-sdk/signature-v4-crt": "^3.34.0",
-    "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@esri/arcgis-html-sanitizer": "^2.5.0",
