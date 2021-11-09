@@ -89,30 +89,6 @@
           },
           "isPending": false
         },
-        "5": {
-          "type": "WIDGET",
-          "setting": {
-            "style": {},
-            "autoProps": {
-              "right": true,
-              "left": false,
-              "top": true,
-              "bottom": false
-            },
-            "vCenter": false,
-            "hCenter": false
-          },
-          "bbox": {
-            "left": "0.0%",
-            "right": "74.5%",
-            "top": "66.7%",
-            "bottom": "0.0%",
-            "width": "25.5%",
-            "height": "33.3%"
-          },
-          "widgetId": "widget_207",
-          "isPending": false
-        },
         "6": {
           "sectionId": "section_1",
           "type": "SECTION",
@@ -147,15 +123,24 @@
               "bottom": true
             },
             "vCenter": false,
-            "hCenter": false
+            "hCenter": false,
+            "effect": {
+              "SCROLL_IN": {
+                "type": "NONE",
+                "option": {
+                  "direction": null,
+                  "configType": "MOLASSES"
+                }
+              }
+            }
           },
           "bbox": {
-            "left": "1.0%",
-            "right": "75.5%",
-            "top": "2.3%",
-            "bottom": "48.4%",
-            "width": "23.5%",
-            "height": "49.3%"
+            "left": "0.0%",
+            "right": "74.5%",
+            "top": "0.6%",
+            "bottom": "29.4%",
+            "width": "25.5%",
+            "height": "70.0%"
           },
           "widgetId": "widget_219",
           "isPending": false
@@ -167,19 +152,19 @@
             "autoProps": {
               "left": false,
               "right": true,
-              "top": false,
-              "bottom": true
+              "top": true,
+              "bottom": false
             },
             "vCenter": false,
             "hCenter": false
           },
           "bbox": {
-            "left": "1.7%",
-            "right": "89.5%",
-            "top": "46.2%",
-            "bottom": "49.3%",
-            "width": "8.8%",
-            "height": "4.5%"
+            "left": "0.0%",
+            "right": "90.6%",
+            "top": "65.8%",
+            "bottom": "29.4%",
+            "width": "9.4%",
+            "height": "4.8%"
           },
           "widgetId": "widget_222",
           "isPending": false
@@ -189,8 +174,8 @@
           "bbox": {
             "left": "0.0%",
             "right": "74.6%",
-            "top": "52.2%",
-            "bottom": "33.3%",
+            "top": "70.7%",
+            "bottom": "14.8%",
             "width": "25.4%",
             "height": "14.5%"
           },
@@ -206,6 +191,79 @@
             "hCenter": false
           },
           "isPending": false
+        },
+        "10": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "19.3%",
+            "right": "75.2%",
+            "top": "86.0%",
+            "bottom": "0.8%",
+            "width": "5.5%",
+            "height": "13.2%"
+          },
+          "widgetId": "widget_224",
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false,
+              "height": "CUSTOM",
+              "width": "AUTO"
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
+        },
+        "11": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "11.4%",
+            "right": "81.5%",
+            "top": "85.8%",
+            "bottom": "0.8%",
+            "width": "7.1%",
+            "height": "13.4%"
+          },
+          "widgetId": "widget_225",
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false,
+              "width": "AUTO"
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
+        },
+        "12": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "0.6%",
+            "right": "89.9%",
+            "top": "87.9%",
+            "bottom": "2.8%",
+            "width": "9.6%",
+            "height": "9.3%"
+          },
+          "widgetId": "widget_226",
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false,
+              "width": "AUTO"
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
         }
       },
       "order": [
@@ -213,10 +271,12 @@
         "1",
         "2",
         "3",
-        "5",
         "6",
         "7",
-        "8"
+        "8",
+        "10",
+        "11",
+        "12"
       ],
       "parent": {
         "type": "pages",
@@ -590,11 +650,11 @@
   "mainSizeMode": "LARGE",
   "theme": "themes/ink/",
   "forBuilderAttributes": {
-    "lockLayout": true,
+    "lockLayout": false,
     "viewPortSize": {
       "LARGE": {
-        "width": 1280,
-        "height": 800
+        "width": 1920,
+        "height": 1080
       }
     }
   },
@@ -1010,39 +1070,6 @@
         }
       }
     },
-    "widget_207": {
-      "uri": "widgets/arcgis/feature-info/",
-      "version": "1.5.0",
-      "label": "Feature Info 1",
-      "config": {
-        "limitGraphics": false,
-        "maxGraphics": 0,
-        "title": true,
-        "fields": true,
-        "media": true,
-        "attachments": true,
-        "lastEditInfo": true,
-        "noDataMessage": "",
-        "styleType": "custom",
-        "style": {
-          "textColor": "",
-          "fontSizeType": "auto",
-          "fontSize": {
-            "distance": 14,
-            "unit": "px"
-          },
-          "backgroundColor": ""
-        }
-      },
-      "id": "widget_207",
-      "useDataSources": [
-        {
-          "dataSourceId": "dataSource_4-OWT_2021_update",
-          "mainDataSourceId": "dataSource_4-OWT_2021_update",
-          "rootDataSourceId": "dataSource_4"
-        }
-      ]
-    },
     "widget_218": {
       "uri": "widgets/simple/",
       "version": "1.5.0",
@@ -1255,6 +1282,81 @@
           }
         }
       }
+    },
+    "widget_224": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "label": "Image 2",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/US_Army_Combat_Capabilities_Development_Command_SSI.png/800px-US_Army_Combat_Capabilities_Development_Command_SSI.png",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/US_Army_Combat_Capabilities_Development_Command_SSI.png/800px-US_Army_Combat_Capabilities_Development_Command_SSI.png",
+            "fileName": "800px-US_Army_Combat_Capabilities_Development_Command_SSI.png",
+            "originalName": "800px-US_Army_Combat_Capabilities_Development_Command_SSI.png",
+            "imgSourceType": "BY_URL"
+          },
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_224"
+    },
+    "widget_225": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "label": "Image 3",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "${appResourceUrl}/images/widget_225/1636416739889.png",
+            "originalUrl": "${appResourceUrl}/images/widget_225/1636416739889.png",
+            "fileName": "1636416739889.png",
+            "originalName": "STTC_Logo.png",
+            "imgSourceType": "BY_UPLOAD",
+            "fileFormat": "image/png",
+            "originalId": "1636416739889",
+            "isUseCompress": false
+          },
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_225"
+    },
+    "widget_226": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "label": "Image 4",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "https://ride.ict.usc.edu/wp-content/uploads/2021/04/GVSC_Logo.png",
+            "originalUrl": "https://ride.ict.usc.edu/wp-content/uploads/2021/04/GVSC_Logo.png",
+            "fileName": "GVSC_Logo.png",
+            "originalName": "GVSC_Logo.png",
+            "imgSourceType": "BY_URL"
+          },
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_226"
     }
   },
   "widgetsManifest": {},
@@ -1382,7 +1484,7 @@
       "page_0": []
     }
   ],
-  "timestamp": 1636324475689,
+  "timestamp": 1636417203996,
   "header": {
     "layout": {
       "LARGE": "layout_24",

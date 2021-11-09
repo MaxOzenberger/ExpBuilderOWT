@@ -4446,7 +4446,9 @@
       "name": "get-map-coordinates",
       "type": "widget",
       "version": "1.5.0",
-      "dependency": "jimu-arcgis",
+      "dependency": [
+        "jimu-arcgis"
+      ],
       "exbVersion": "1.5.0",
       "author": "Your Name",
       "description": "A hello world starter widget",

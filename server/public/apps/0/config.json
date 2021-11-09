@@ -89,30 +89,6 @@
           },
           "isPending": false
         },
-        "5": {
-          "type": "WIDGET",
-          "setting": {
-            "style": {},
-            "autoProps": {
-              "right": true,
-              "left": false,
-              "top": true,
-              "bottom": false
-            },
-            "vCenter": false,
-            "hCenter": false
-          },
-          "bbox": {
-            "left": "0.0%",
-            "right": "74.5%",
-            "top": "66.7%",
-            "bottom": "0.0%",
-            "width": "25.5%",
-            "height": "33.3%"
-          },
-          "widgetId": "widget_207",
-          "isPending": false
-        },
         "6": {
           "sectionId": "section_1",
           "type": "SECTION",
@@ -147,17 +123,50 @@
               "bottom": true
             },
             "vCenter": false,
+            "hCenter": false,
+            "effect": {
+              "SCROLL_IN": {
+                "type": "NONE",
+                "option": {
+                  "direction": null,
+                  "configType": "MOLASSES"
+                }
+              }
+            }
+          },
+          "bbox": {
+            "left": "0.0%",
+            "right": "74.5%",
+            "top": "0.6%",
+            "bottom": "26.6%",
+            "width": "25.5%",
+            "height": "72.8%"
+          },
+          "widgetId": "widget_219",
+          "isPending": false
+        },
+        "8": {
+          "type": "WIDGET",
+          "setting": {
+            "style": {},
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
             "hCenter": false
           },
           "bbox": {
-            "left": "1.0%",
-            "right": "75.5%",
-            "top": "2.3%",
-            "bottom": "48.4%",
-            "width": "23.5%",
-            "height": "49.3%"
+            "left": "0.0%",
+            "right": "90.6%",
+            "top": "68.5%",
+            "bottom": "26.7%",
+            "width": "9.4%",
+            "height": "4.8%"
           },
-          "widgetId": "widget_219",
+          "widgetId": "widget_222",
           "isPending": false
         },
         "9": {
@@ -165,8 +174,8 @@
           "bbox": {
             "left": "0.0%",
             "right": "74.6%",
-            "top": "52.2%",
-            "bottom": "33.3%",
+            "top": "73.4%",
+            "bottom": "12.1%",
             "width": "25.4%",
             "height": "14.5%"
           },
@@ -182,14 +191,39 @@
             "hCenter": false
           },
           "isPending": false
+        },
+        "12": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "0.0%",
+            "right": "74.5%",
+            "top": "89.7%",
+            "bottom": "0.0%",
+            "width": "25.5%",
+            "height": "10.30%"
+          },
+          "widgetId": "widget_226",
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": true,
+              "bottom": false,
+              "width": "CUSTOM",
+              "height": "AUTO"
+            },
+            "vCenter": false,
+            "hCenter": false
+          },
+          "isPending": false
         }
       },
       "order": [
+        "12",
         "9",
         "1",
         "2",
         "3",
-        "5",
         "6",
         "7"
       ],
@@ -203,18 +237,19 @@
       "order": [
         "0",
         "1",
-        "2"
+        "2",
+        "3"
       ],
       "content": {
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "2.00%",
-            "right": "94.5116%",
+            "left": "2.1%",
+            "right": "95.3%",
             "top": "50%",
-            "bottom": "16.6667%",
-            "width": "40.00px",
-            "height": "40px"
+            "bottom": "0.0%",
+            "width": "45.00px",
+            "height": "45px"
           },
           "widgetId": "widget_70",
           "isPending": false,
@@ -225,7 +260,9 @@
             "aspectRatio": 1,
             "autoProps": {
               "top": false,
-              "bottom": true
+              "bottom": true,
+              "left": false,
+              "right": true
             }
           },
           "parent": "layout_24"
@@ -236,7 +273,7 @@
             "left": "5.9983%",
             "right": "18.9598%",
             "top": "50%",
-            "bottom": "9.0365%",
+            "bottom": "0%",
             "width": "75.0419%",
             "height": "81.9271%"
           },
@@ -253,23 +290,54 @@
         "2": {
           "type": "WIDGET",
           "bbox": {
-            "left": "36.2%",
-            "right": "0%",
-            "top": "5.0%",
-            "bottom": "5.0%",
-            "width": "31.3%",
-            "height": "90.0%"
+            "left": "5.3%",
+            "right": "92.1%",
+            "top": "50%",
+            "bottom": "0.0%",
+            "width": "45.00px",
+            "height": "45px"
           },
-          "widgetId": "widget_224",
+          "widgetId": "widget_227",
+          "isPending": false,
           "setting": {
+            "vCenter": true,
+            "hCenter": false,
+            "heightMode": "ratio",
+            "aspectRatio": 1,
             "autoProps": {
-              "right": false,
-              "left": true,
-              "top": true,
-              "bottom": false
-            },
-            "hCenter": false
-          }
+              "top": false,
+              "bottom": true,
+              "left": false,
+              "right": true
+            }
+          },
+          "parent": "layout_24"
+        },
+        "3": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "8.6%",
+            "right": "88.8%",
+            "top": "50%",
+            "bottom": "0.0%",
+            "width": "45.00px",
+            "height": "45px"
+          },
+          "widgetId": "widget_228",
+          "isPending": false,
+          "setting": {
+            "vCenter": true,
+            "hCenter": false,
+            "heightMode": "ratio",
+            "aspectRatio": 1,
+            "autoProps": {
+              "top": false,
+              "bottom": true,
+              "left": false,
+              "right": true
+            }
+          },
+          "parent": "layout_24"
         }
       },
       "parent": {
@@ -625,11 +693,11 @@
   "mainSizeMode": "LARGE",
   "theme": "themes/ink/",
   "forBuilderAttributes": {
-    "lockLayout": true,
+    "lockLayout": false,
     "viewPortSize": {
       "LARGE": {
-        "width": 1280,
-        "height": 800
+        "width": 1920,
+        "height": 1080
       }
     }
   },
@@ -692,7 +760,7 @@
       "uri": "widgets/common/text/",
       "version": "1.5.0",
       "config": {
-        "text": "<p><span style=\"color: var(--light); font-size: 28px;\">    STEWS API and GRiD Testing</span></p>",
+        "text": "<p><span style=\"color: var(--light); font-size: 28px;\">                  STEWS API and GRiD Testing</span></p>",
         "placeholder": "Double click to edit text",
         "style": {
           "verticalAlign": "start",
@@ -1045,48 +1113,6 @@
         }
       }
     },
-    "widget_207": {
-      "uri": "widgets/arcgis/feature-info/",
-      "version": "1.5.0",
-      "label": "Feature Info 1",
-      "config": {
-        "limitGraphics": false,
-        "maxGraphics": 0,
-        "title": true,
-        "fields": true,
-        "media": true,
-        "attachments": true,
-        "lastEditInfo": true,
-        "noDataMessage": "",
-        "styleType": "custom",
-        "style": {
-          "textColor": "",
-          "fontSizeType": "auto",
-          "fontSize": {
-            "distance": 14,
-            "unit": "px"
-          },
-          "backgroundColor": ""
-        }
-      },
-      "id": "widget_207",
-      "useDataSources": [
-        {
-          "dataSourceId": "dataSource_4-OWT_2021_update",
-          "mainDataSourceId": "dataSource_4-OWT_2021_update",
-          "rootDataSourceId": "dataSource_4"
-        }
-      ]
-    },
-    "widget_218": {
-      "uri": "widgets/simple/",
-      "version": "1.5.0",
-      "label": "simple 1",
-      "config": {
-        "exampleConfigProperty": "test"
-      },
-      "id": "widget_218"
-    },
     "widget_219": {
       "uri": "widgets/get-map-coordinates/",
       "version": "1.5.0",
@@ -1197,7 +1223,7 @@
       ],
       "style": {
         "background": {
-          "color": "var(--secondary-100)",
+          "color": "var(--secondary-900)",
           "fillType": "fit",
           "image": {
             "url": ""
@@ -1289,6 +1315,139 @@
         "exampleConfigProperty": "test"
       },
       "id": "widget_225"
+    },
+    "widget_226": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "label": "Image 4",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "${appResourceUrl}/images/widget_226/1636480121465.png",
+            "originalUrl": "${appResourceUrl}/images/widget_226/1636480121465.png",
+            "fileName": "1636480121465.png",
+            "originalName": "peostri.png",
+            "imgSourceType": "BY_UPLOAD",
+            "fileFormat": "image/png",
+            "originalId": "1636480121465",
+            "isUseCompress": false
+          },
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_226"
+    },
+    "widget_227": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "${appResourceUrl}/images/widget_225/1636416739889.png",
+            "originalUrl": "${appResourceUrl}/images/widget_225/1636416739889.png",
+            "fileName": "1636416739889.png",
+            "originalName": "STTC_Logo.png",
+            "imgSourceType": "BY_UPLOAD",
+            "fileFormat": "image/png",
+            "originalId": "1636416739889",
+            "isUseCompress": false,
+            "cropParam": {
+              "svgViewBox": "0 0 28 28",
+              "svgPath": "M28 14c0 7.732-6.268 14-14 14S0 21.732 0 14 6.268 0 14 0s14 6.268 14 14z",
+              "cropShape": "circle"
+            }
+          },
+          "imageFillMode": "FIT",
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_227",
+      "parent": {
+        "LARGE": [
+          {
+            "layoutId": "layout_24",
+            "layoutItemId": "0"
+          }
+        ],
+        "MEDIUM": [
+          {
+            "layoutId": "layout_50",
+            "layoutItemId": "0"
+          }
+        ],
+        "SMALL": [
+          {
+            "layoutId": "layout_72",
+            "layoutItemId": "0"
+          }
+        ]
+      },
+      "label": "Image 1 copy"
+    },
+    "widget_228": {
+      "uri": "widgets/common/image/",
+      "version": "1.5.0",
+      "config": {
+        "functionConfig": {
+          "altText": "",
+          "toolTip": "",
+          "linkParam": {},
+          "scale": "Fit",
+          "imageParam": {
+            "url": "${appResourceUrl}/images/widget_224/1636480153497.jpg",
+            "originalUrl": "${appResourceUrl}/images/widget_224/1636480153497.jpg",
+            "fileName": "1636480153497.jpg",
+            "originalName": "ste-cft.jpg",
+            "imgSourceType": "BY_UPLOAD",
+            "fileFormat": "image/jpeg",
+            "originalId": "1636480153497",
+            "isUseCompress": false,
+            "cropParam": {
+              "svgViewBox": "0 0 28 28",
+              "svgPath": "M28 14c0 7.732-6.268 14-14 14S0 21.732 0 14 6.268 0 14 0s14 6.268 14 14z",
+              "cropShape": "circle"
+            }
+          },
+          "imageFillMode": "FIT",
+          "imgSourceType": "",
+          "srcExpression": null
+        },
+        "styleConfig": {}
+      },
+      "id": "widget_228",
+      "parent": {
+        "LARGE": [
+          {
+            "layoutId": "layout_24",
+            "layoutItemId": "0"
+          }
+        ],
+        "MEDIUM": [
+          {
+            "layoutId": "layout_50",
+            "layoutItemId": "0"
+          }
+        ],
+        "SMALL": [
+          {
+            "layoutId": "layout_72",
+            "layoutItemId": "0"
+          }
+        ]
+      },
+      "label": "Image 1 copy copy"
     }
   },
   "widgetsManifest": {},
@@ -1416,7 +1575,7 @@
       "page_0": []
     }
   ],
-  "timestamp": 1636457012357,
+  "timestamp": 1636480847528,
   "header": {
     "layout": {
       "LARGE": "layout_24",
