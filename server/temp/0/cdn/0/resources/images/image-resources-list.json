@@ -10,5 +10,17 @@
     "originId": "1629291380236",
     "fileFormat": "image/png",
     "isUseCompress": false
+  },
+  "1636416739889": {
+    "originalName": "STTC_Logo.png",
+    "fileName": "1636416739889.png",
+    "size": 65836,
+    "url": "${appResourceUrl}/images/widget_225/1636416739889.png",
+    "created": 1636416739889,
+    "resourcesPrefix": "images/widget_225",
+    "referedIds": [],
+    "originId": "1636416739889",
+    "fileFormat": "image/png",
+    "isUseCompress": false
   }
 }

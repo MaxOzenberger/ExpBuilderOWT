@@ -1,10 +1,13 @@
 import { React, AllWidgetProps, css, classNames, jsx, appActions } from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView, loadArcGISJSAPIModules } from 'jimu-arcgis';
-import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
+import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector';
+import Accordion from 'react-bootstrap/Accordion';
+import Loader from 'react-loader-spinner';
 import * as projection from "esri/geometry/projection";
 import * as SpatialReference from 'esri/geometry/SpatialReference';
 import * as Graphic from 'esri/Graphic';
 import * as FeatureLayer from 'esri/layers/FeatureLayer';
+import * as watchUtils from 'esri/core/watchUtils';
 import axios from 'axios';
 import FormGroup from '@material-ui/core/FormGroup';
 import List from '@material-ui/core/List';
@@ -16,6 +19,8 @@ import IconButton from '@material-ui/core/IconButton';
 import fortawesome from '@fortawesome/fontawesome-free/';
 import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 interface State {
   extent: __esri.Extent,
@@ -25,7 +30,13 @@ interface State {
   ymin: Number,
   ymax: Number,
   jimuMapView: JimuMapView,
-  isButtonDisabled: Boolean
+  isButtonDisabled: Boolean,
+  pcHTML: string,
+  vecHTML: string,
+  imgHTML: string,
+  meshHTML: string,
+  fgHTML: string,
+  loading: Boolean
 }
 
 const useStyles = makeStyles(() =>
@@ -49,7 +60,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
     ymin: null,
     ymax: null,
     jimuMapView: null,
-    isButtonDisabled: true
+    isButtonDisabled: true,
+    pcHTML: "",
+    vecHTML: "",
+    imgHTML: "",
+    meshHTML: "",
+    fgHTML: "",
+    loading: false
   };
 
   getStyle () {
@@ -59,6 +76,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
       margin-bottom: 0px !important;
       color: red;
     };
+    .title {
+      margin-left: 6%;
+      margin-top: 3%;
+    }
     .searchBtn {
       position: absolute;
       bottom: 0;
@@ -71,6 +92,14 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
     return this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 1;
   }
 
+  componentDidMount() {
+    var loadingdiv = document.getElementById("loadingDiv");
+    loadingdiv.style.display="none";
+    loadingdiv.style.position="absolute";
+    loadingdiv.style.left="35%";
+    loadingdiv.style.top="40%";
+  }
+
   componentWillUnmount() {
     if (this.extentWatch) {
       this.extentWatch.remove();
@@ -79,6 +108,16 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
   }
 
   onActiveViewChange = (jimuMapView: JimuMapView) => {
+    jimuMapView.view.watch('updating', function(evt){
+      if(evt === true){
+        document.getElementById("loadingDiv").style.display="block";
+        document.getElementsByClassName("MuiFormGroup-root test")[0].style.opacity="0.4";
+      }
+      else {
+        document.getElementById("loadingDiv").style.display="none";
+        document.getElementsByClassName("MuiFormGroup-root test")[0].style.opacity="1";
+      }
+    });
     if (!this.extentWatch) {
       var outSR = new SpatialReference({
         wkid: 4326
@@ -133,16 +172,15 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
       //Successful:
       .then((response) => {
 
+        
+
         this.state.jimuMapView.view.graphics.removeAll();
 
-        function insertAfter(referenceNode, newNode) {
-          referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-        }
-        var pcPoly = []; var pcGfx = [];
-        var meshPoly = []; var meshGfx = [];
-        var msPoly = []; var msGfx = [];
-        var vecPoly = []; var vecGfx = [];
-        var rasPoly = []; var rasGfx = [];
+        var pcPoly = []; var pcGfx = []; this.state.pcHTML = "";
+        var meshPoly = []; var meshGfx = []; this.state.meshHTML = "";
+        var msPoly = []; var msGfx = []; this.state.fgHTML = "";
+        var vecPoly = []; var vecGfx = []; this.state.vecHTML = "";
+        var rasPoly = []; var rasGfx = []; this.state.imgHTML = "";
         for(var i = 0; i < response.data.pointclouds.length; i++){
           pcPoly = [];
           var fullEnv = [];
@@ -230,9 +268,12 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           });
           //this.state.jimuMapView.view.graphics.add(graphic);
           pcGfx[i] = graphic;
-          var el = document.createElement("span");
-          el.innerHTML = item.name;
-          var div = document.getElementById("checkbox-list-label-Point Clouds");
+          var pcString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+            "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+            "' value='" + item.name + "' >" + item.name + "</label></li>";
+          this.state.pcHTML = this.state.pcHTML.concat(pcString);
+          var div = document.getElementById("pcLayers") as HTMLDivElement;
+          div.innerHTML = pcString;
           //insertAfter(div, el);
         }
 
@@ -313,10 +354,12 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
             attributes: lineAtt
           });
           msGfx[i] = graphic;
-          var el = document.createElement("span");
-          el.innerHTML = response.data.modsims[i].name;
-          var div = document.getElementById("checkbox-list-label-FG3D Data");
-          //insertAfter(div, el);
+          var fgString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+            "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+            "' value='" + item.name + "' >" + item.name + "</label></li>";
+          this.state.fgHTML = this.state.fgHTML.concat(fgString);
+          var div = document.getElementById("fgLayers") as HTMLDivElement;
+          div.innerHTML = fgString;
         }
 
         for(var i = 0; i < response.data.meshes.length; i++){
@@ -364,6 +407,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           };
           var viewUrl = "";
           if(item.streaming_url != null){
+            console.log(item.datatype);
             if(item.datatype == "Indexed 3D Scene (I3S)"){
               var viewUrlarr = item.streaming_url.split("/");
               viewUrl = "https://grid.nga.mil/grid/mesh/viewer/" + viewUrlarr[viewUrlarr.length - 2] + "/";
@@ -401,10 +445,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
             attributes: lineAtt
           });
           meshGfx[i] = graphic;
-          var el = document.createElement("span");
-          el.innerHTML = response.data.meshes[i].name;
-          var div = document.getElementById("checkbox-list-label-Meshes");
-          //insertAfter(div, el);
+          var meshString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+            "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+            "' value='" + item.name + "' >" + item.name + "</label></li>";
+          this.state.meshHTML = this.state.meshHTML.concat(meshString);
+          var div = document.getElementById("meshLayers") as HTMLDivElement;
+          div.innerHTML = this.state.meshHTML;
+          console.log(div.innerHTML);
         }
 
         for(var i = 0; i < response.data.vectors.length; i++){
@@ -484,10 +531,12 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
             attributes: lineAtt
           });
           vecGfx[i] = graphic;
-          var el = document.createElement("span");
-          el.innerHTML = response.data.vectors[i].name;
-          var div = document.getElementById("checkbox-list-label-Vectors");
-          //insertAfter(div, el);
+          var vecString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+            "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+            "' value='" + item.name + "' >" + item.name + "</label></li>";
+          this.state.vecHTML = this.state.vecHTML.concat(vecString);
+          var div = document.getElementById("vecLayers") as HTMLDivElement;
+          div.innerHTML = pcString;
         }
 
         for(var i = 0; i < response.data.rasters.length; i++){
@@ -567,10 +616,12 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
             attributes: lineAtt
           });
           rasGfx[i] = graphic;
-          var el = document.createElement("span");
-          el.innerHTML = response.data.rasters[i].name;
-          var div = document.getElementById("checkbox-list-label-Elevation Models");
-          //insertAfter(div, el);
+          var imgString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+          "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+          "' value='" + item.name + "' >" + item.name + "</label></li>";
+          this.state.imgHTML = this.state.imgHTML.concat(imgString);
+          var div = document.getElementById("imgLayers") as HTMLDivElement;
+          div.innerHTML = imgString;
         }
         var thisView = this.state.jimuMapView.view;
         var allGfx = pcGfx.concat(msGfx, /*rasGfx, vecGfx,*/ meshGfx);
@@ -809,6 +860,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           .then((response) => {
             thisView.goTo(response.extent);
           });
+        this.state.loading = false;
         //this.props.dispatch(appActions.widgetStatePropChange("widget_207", "dataSource", flayer));
         }, 
       //Error:
@@ -840,50 +892,70 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
   }
 
   render() {
+    const isLoading = this.state.loading;
+    let widgetContent;
     if (!this.isConfigured()) {
       return 'Select a map';
     }
-    return (
-      <div className="widget-starter jimu-widget">
-        {this.props.hasOwnProperty("useMapWidgetIds") &&
-         this.props.useMapWidgetIds &&
-          this.props.useMapWidgetIds[0] && (
-           <JimuMapViewComponent
-             useMapWidgetId={this.props.useMapWidgetIds?.[0]}
-             onActiveViewChange={this.onActiveViewChange}
-           />
-         )
-        }
-
-        
-        <FormGroup className={classNames('test')}>
-          <List>
-            {["Point Clouds", "Elevation Models", "Imagery", "Vectors", "Meshes", "FG3D Data"].map((value) => {
-              const labelId = `checkbox-list-label-${value}`;
-
-              return (
-                <ListItem
-                  key={value}
-                >
-                  {/* <IconButton aria-label="Example">
-                    <fortawesome.FontAwesomeIcon icon={fortawesome.faEllipsisV} />
-                  </IconButton> */}
-                  <ListItemText id={labelId} primary={`${value}`} />
-                </ListItem>
-              );
-            })}
-          </List>
-{/*           <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="Point Clouds" />
-          <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="Elevation Models" />
-          <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="Imagery" />
-          <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="Vectors" />
-          <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="Meshes" />
-          <FormControlLabel className={classNames('test')} control={<Checkbox/>} label="FG3D Data" /> */}
-        </FormGroup>
-          <p></p>
-        <this.searchBtn />
-      </div>
-    );
+/*     if (isLoading) {
+      console.log("loading");
+      widgetContent = <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+      />;
+    }
+    else {
+      widgetContent = <div></div>;
+    } */
+      return (
+        <div className="widget-starter jimu-widget">
+          {this.props.hasOwnProperty("useMapWidgetIds") &&
+           this.props.useMapWidgetIds &&
+            this.props.useMapWidgetIds[0] && (
+             <JimuMapViewComponent
+               useMapWidgetId={this.props.useMapWidgetIds?.[0]}
+               onActiveViewChange={this.onActiveViewChange}
+             />
+           )
+          }
+          
+          <FormGroup className={classNames('test')}>
+            <h5 className={classNames('title')}>Map Layers</h5>
+            <Accordion>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Point Clouds</Accordion.Header>
+                <Accordion.Body><div id="pcLayers"></div></Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Elevation Models</Accordion.Header>
+                <Accordion.Body><div id="elLayers"></div></Accordion.Body>
+              </Accordion.Item>            
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>Imagery</Accordion.Header>
+                <Accordion.Body><div id="imgLayers"></div></Accordion.Body>
+              </Accordion.Item>  
+              <Accordion.Item eventKey="3">
+                <Accordion.Header>Vectors</Accordion.Header>
+                <Accordion.Body><div id="vecLayers"></div></Accordion.Body>
+              </Accordion.Item>  
+              <Accordion.Item eventKey="4">
+                <Accordion.Header>Meshes</Accordion.Header>
+                <Accordion.Body><div id="meshLayers"></div></Accordion.Body>
+              </Accordion.Item>  
+              <Accordion.Item eventKey="5">
+                <Accordion.Header>FG3D Data</Accordion.Header>
+                <Accordion.Body><div id="fgLayers"></div></Accordion.Body>
+              </Accordion.Item>  
+            </Accordion>
+          </FormGroup>
+          <div id="loadingDiv" class="loading"><img height="100px" width="100px" src="https://i.imgur.com/InxgKi5.gif"/></div>
+          <this.searchBtn />
+        </div>
+      );
+    
+    
   }
 }
 

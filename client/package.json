@@ -84,6 +84,7 @@
     "react-inlinesvg": "^2.3.0",
     "react-intl": "^5.17.4",
     "react-joyride": "^2.3.0",
+    "react-loader-spinner": "^4.0.0",
     "react-redux": "^7.2.4",
     "react-resize-detector": "^6.7.1",
     "react-sizeme": "^3.0.1",

@@ -215,7 +215,7 @@ const Login = () => {
               onChange={handleSTEWSurlChange}
               onKeyPress={handleKeyPress}
             />
-            <u><a href="https://stews-api.dodterrain.org" target="_blank">Create an account here</a></u>
+            <u><a href="https://stews-api.dodterrain.org/admin/user/register" target="_blank">Create an account here</a></u>
             <TextField
               error={state.isError}
               fullWidth
