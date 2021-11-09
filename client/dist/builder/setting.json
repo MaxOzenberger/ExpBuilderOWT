@@ -8,8 +8,8 @@
   },
   "devEnv": {
     "prod": {
-      "portalUrl": "https://dodterrain.org/portal",
-      "clientId": "3V0alcPKu9QrJXwD",
+      "portalUrl": "https://map.apan.org/portal",
+      "clientId": "GUL47WqpRBDnUxOW",
       "isWebTier": false
     }
   }
