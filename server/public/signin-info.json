@@ -16,11 +16,5 @@
     "clientId": "3V0alcPKu9QrJXwD",
     "supportsOAuth": true,
     "isWebTier": false
-  },
-  {
-    "portalUrl": "https://map.apan.org/portal",
-    "clientId": "GUL47WqpRBDnUxOW",
-    "supportsOAuth": true,
-    "isWebTier": false
   }
 ]

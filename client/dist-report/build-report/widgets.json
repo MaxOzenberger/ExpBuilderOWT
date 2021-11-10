@@ -347,7 +347,7 @@
   },
   "errors": [],
   "warnings": [],
-  "outputPath": "C:\\Users\\kvola\\Source\\Repos\\ExpBuilderOWT\\client\\dist",
+  "outputPath": "C:\\src\\esri-experience-builder\\ArcGISExperienceBuilder\\client\\dist",
   "publicPath": "",
   "version": "4.46.0"
 }
