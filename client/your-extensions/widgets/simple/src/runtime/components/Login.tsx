@@ -8,13 +8,16 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import CardHeader from '@material-ui/core/CardHeader';
-import Button from '@material-ui/core/Button';
+import Button from 'react-bootstrap/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 
 //styling for form components
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
+      position: 'absolute',
+      top: "0px",
+      left: "0px",
       display: 'flex',
       flexWrap: 'wrap',
       width: 400,
@@ -30,7 +33,8 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff'
     },
     card: {
-      marginTop: theme.spacing(10)
+      /* position: "relative",
+      top: "-33px" */
     },
     toast: {
       textAlign: 'center'
@@ -45,7 +49,8 @@ type State = {
   STEWSurl: string
   isButtonDisabled: boolean
   helperText: string
-  isError: boolean
+  isError: boolean,
+  isOpen: boolean
 };
 
 const initialState:State = {
@@ -54,7 +59,8 @@ const initialState:State = {
   STEWSurl: 'https://stews-api.dodterrain.org',
   isButtonDisabled: true,
   helperText: '',
-  isError: false
+  isError: false,
+  isOpen: false
 };
 
 type Action = { type: 'setUsername', payload: string }
@@ -154,6 +160,7 @@ const Login = () => {
       let n: ReturnType<typeof setTimeout>;
       n = setTimeout(cb, 2000); */
       console.log(globalThis.accessToken);
+      document.getElementById("loginButton").style.backgroundColor = "lightgreen";
     }, (error) => {
       //Unsuccessful
       console.log(error);
@@ -198,62 +205,63 @@ const Login = () => {
 
   //The HTMLish stuff for the form
   return (
-    <form className={classes.container} noValidate autoComplete="off">
-      <Card className={classes.card}>
-        <CardHeader className={classes.header} title="Login to STEWS" />
-        <CardContent>
-          <div>
-            <TextField
-              error={state.isError}
-              fullWidth
-              id="STEWSurl"
-              type="text"
-              label="STEWS URL"
-              placeholder="Enter URL Here"
-              margin="normal"
-              defaultValue="https://stews-api.dodterrain.org"
-              onChange={handleSTEWSurlChange}
-              onKeyPress={handleKeyPress}
-            />
-            <u><a href="https://stews-api.dodterrain.org/admin/user/register" target="_blank">Create an account here</a></u>
-            <TextField
-              error={state.isError}
-              fullWidth
-              id="username"
-              type="email"
-              label="Username/Email"
-              placeholder="Username/Email"
-              margin="normal"
-              onChange={handleUsernameChange}
-              onKeyPress={handleKeyPress}
-            />
-            <TextField
-              error={state.isError}
-              fullWidth
-              id="password"
-              type="password"
-              label="Password"
-              placeholder="Password"
-              margin="normal"
-              onChange={handlePasswordChange}
-              onKeyPress={handleKeyPress}
-            />
-          </div>
-        </CardContent>
-        <CardActions>
-          <Button
-            variant="contained"
-            size="large"
-            color="secondary"
-            className={classes.loginBtn}
-            onClick={handleLogin}
-            disabled={state.isButtonDisabled}>
-            Login
-          </Button>
-        </CardActions>
-        <h3 className={classes.toast}>{state.helperText}</h3>
-      </Card>
-    </form>
+        <form className={classes.container} noValidate autoComplete="off">
+          <Card className={classes.card}>
+            <CardHeader className={classes.header} title="Login to STEWS" />
+            <CardContent>
+              <div>
+                <TextField
+                  error={state.isError}
+                  fullWidth
+                  id="STEWSurl"
+                  type="text"
+                  label="STEWS URL"
+                  placeholder="Enter URL Here"
+                  margin="normal"
+                  defaultValue="https://stews-api.dodterrain.org"
+                  onChange={handleSTEWSurlChange}
+                  onKeyPress={handleKeyPress}
+                />
+                <u><a href="https://stews-api.dodterrain.org/admin/user/register" target="_blank">Create an account here</a></u>
+                <TextField
+                  error={state.isError}
+                  fullWidth
+                  id="username"
+                  type="email"
+                  label="Username/Email"
+                  placeholder="Username/Email"
+                  margin="normal"
+                  onChange={handleUsernameChange}
+                  onKeyPress={handleKeyPress}
+                />
+                <TextField
+                  error={state.isError}
+                  fullWidth
+                  id="password"
+                  type="password"
+                  label="Password"
+                  placeholder="Password"
+                  margin="normal"
+                  onChange={handlePasswordChange}
+                  onKeyPress={handleKeyPress}
+                />
+              </div>
+            </CardContent>
+            <CardActions>
+              <Button
+                variant="contained"
+                size="large"
+                color="secondary"
+                className={classes.loginBtn}
+                onClick={handleLogin}
+                disabled={state.isButtonDisabled}>
+                Login
+              </Button>
+            </CardActions>
+            <h3 className={classes.toast}>{state.helperText}</h3>
+          </Card>
+        </form>
+      
   );
 }
 

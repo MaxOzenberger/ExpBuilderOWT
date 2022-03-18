@@ -1,12 +1,11 @@
 .test {
     size: small;
     margin-bottom: 0px !important;
-    color: red;
 };
 .searchBtn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    height: 50px;
+    width: -webkit-fill-available;
+    position: relative;
 };
 .esri-view-width-large .esri-popup__main-container {
     max-height: 800px;
