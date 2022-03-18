@@ -1,27 +1,19 @@
 import { React, AllWidgetProps, css, classNames, jsx, appActions } from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView, loadArcGISJSAPIModules } from 'jimu-arcgis';
-import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector';
 import Accordion from 'react-bootstrap/Accordion';
-import Loader from 'react-loader-spinner';
 import * as projection from "esri/geometry/projection";
 import * as SpatialReference from 'esri/geometry/SpatialReference';
 import * as Graphic from 'esri/Graphic';
 import * as FeatureLayer from 'esri/layers/FeatureLayer';
 import * as watchUtils from 'esri/core/watchUtils';
-import * as TopFeaturesQuery from 'esri/rest/support/TopFeaturesQuery';
-import * as TopFilter from "esri/rest/support/TopFilter";
 import axios from 'axios';
 import FormGroup from '@material-ui/core/FormGroup';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Checkbox from '@material-ui/core/Checkbox';
-import IconButton from '@material-ui/core/IconButton';
-import fortawesome from '@fortawesome/fontawesome-free/';
 import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
+
 
 
 interface State {
@@ -45,9 +37,10 @@ interface State {
 const useStyles = makeStyles(() =>
   createStyles({
     searchBtn: {
-      position: 'absolute',
+      width:"100%"
+/*       position: 'absolute',
       bottom: 0,
-      right: 0
+      right: 0 */
     }
   })
 );
@@ -78,16 +71,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
     .test {
       size: small;
       margin-bottom: 0px !important;
-      color: red;
     };
     .title {
       margin-left: 6%;
       margin-top: 3%;
     }
     .searchBtn {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      width: 100%;
     };
     `
   }
@@ -294,92 +284,93 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           div.innerHTML = pcString;
           //insertAfter(div, el);
         }
-
-        for(var i = 0; i < response.data.modsims.length; i++){
-          msPoly = [];
-          var fullEnv = [];
-          var item = response.data.modsims[i];
-          var geomSplit = response.data.modsims[i].geom.split(",");
-          for(var y=0; y<geomSplit.length; y++){
-            var ring;
-            var envelope;
-            if(y==0){
-              var r = geomSplit[y].substring(10);
-              ring = r.split(" ");
-              ring[0] = parseFloat(ring[0]);
-              ring[1] = parseFloat(ring[1]);
-              msPoly[y] = ring;
-            } else if (geomSplit[y].startsWith(' (')) {
-              var yInit = y;
-              for(var x = 0; x < geomSplit.length - yInit; x++){
-                envelope = geomSplit[y].replace(" ", "");
-                envelope = envelope.replace("(", "");
-                envelope = envelope.replaceAll(")", "");
-                envelope = envelope.split(" ");
-                envelope[0] = parseFloat(envelope[0]);
-                envelope[1] = parseFloat(envelope[1]);
-                fullEnv[x] = envelope;
-                y++;
+        if(response.data.modsims){
+          for(var i = 0; i < response.data.modsims.length; i++){
+            msPoly = [];
+            var fullEnv = [];
+            var item = response.data.modsims[i];
+            var geomSplit = response.data.modsims[i].geom.split(",");
+            for(var y=0; y<geomSplit.length; y++){
+              var ring;
+              var envelope;
+              if(y==0){
+                var r = geomSplit[y].substring(10);
+                ring = r.split(" ");
+                ring[0] = parseFloat(ring[0]);
+                ring[1] = parseFloat(ring[1]);
+                msPoly[y] = ring;
+              } else if (geomSplit[y].startsWith(' (')) {
+                var yInit = y;
+                for(var x = 0; x < geomSplit.length - yInit; x++){
+                  envelope = geomSplit[y].replace(" ", "");
+                  envelope = envelope.replace("(", "");
+                  envelope = envelope.replaceAll(")", "");
+                  envelope = envelope.split(" ");
+                  envelope[0] = parseFloat(envelope[0]);
+                  envelope[1] = parseFloat(envelope[1]);
+                  fullEnv[x] = envelope;
+                  y++;
+                }
+              } else if (y == geomSplit.length-1) {
+                ring = geomSplit[y].replace(" ", "");
+                ring = ring.replaceAll(")", "");
+                ring = ring.split(" ");
+                ring[0] = parseFloat(ring[0]);
+                ring[1] = parseFloat(ring[1]);
+                msPoly[y] = ring;
+              } else {
+                ring = geomSplit[y].replace(" ", "");
+                ring = ring.replace("(", "");
+                ring = ring.replace(")", "");
+                ring = ring.split(" ");
+                ring[0] = parseFloat(ring[0]);
+                ring[1] = parseFloat(ring[1]);
+                msPoly[y] = ring;
               }
-            } else if (y == geomSplit.length-1) {
-              ring = geomSplit[y].replace(" ", "");
-              ring = ring.replaceAll(")", "");
-              ring = ring.split(" ");
-              ring[0] = parseFloat(ring[0]);
-              ring[1] = parseFloat(ring[1]);
-              msPoly[y] = ring;
-            } else {
-              ring = geomSplit[y].replace(" ", "");
-              ring = ring.replace("(", "");
-              ring = ring.replace(")", "");
-              ring = ring.split(" ");
-              ring[0] = parseFloat(ring[0]);
-              ring[1] = parseFloat(ring[1]);
-              msPoly[y] = ring;
+            };
+            var viewUrl = "";
+            if(item.streaming_url != null){
+              var viewUrlarr = item.streaming_url.split("/");
+              viewUrl = "https://grid.nga.mil/grid/mesh/viewer/" + viewUrlarr[viewUrlarr.length - 2] + "/";
             }
-          };
-          var viewUrl = "";
-          if(item.streaming_url != null){
-            var viewUrlarr = item.streaming_url.split("/");
-            viewUrl = "https://grid.nga.mil/grid/mesh/viewer/" + viewUrlarr[viewUrlarr.length - 2] + "/";
+            const lineAtt = {
+              ObjectID: y,
+              Name: item.name,
+              Type: "ModSim",
+              access_tag: item.access_tag, 
+              cesium_viewer: item.cesium_viewer,
+              classification: item.classification,
+              collected_at: item.collected_at,
+              datatype: item.datatype,
+              filesize: item.filesize,
+              program: item.program,
+              streaming_url: viewUrl,
+              sensor: item.sensor,
+              //srs: item.srs[0],
+              density: item.density,
+              Convert_Data_Type:	"https://stews-api.dodterrain.org/admin/",
+              Generate_STE_3D_Terrain_pack:	"https://stews-api.dodterrain.org/admin/",
+              Clip_and_ship:	"https://stews-api.dodterrain.org/admin/",
+              Upload_raw:	"https://stews-api.dodterrain.org/admin/"
+            };
+            const polygon = {
+              type: "polygon",
+              rings: [msPoly, fullEnv]
+            };
+            const graphic = new Graphic({
+              geometry: polygon,
+              attributes: lineAtt
+            });
+            msGfx[i] = graphic;
+            var fgString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
+              "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
+              "' value='" + item.name + "' >" + item.name + "</label></li>";
+            this.state.fgHTML = this.state.fgHTML.concat(fgString);
+            var div = document.getElementById("fgLayers") as HTMLDivElement;
+            div.innerHTML = fgString;
           }
-          const lineAtt = {
-            ObjectID: y,
-            Name: item.name,
-            Type: "ModSim"
-            access_tag: item.access_tag, 
-            cesium_viewer: item.cesium_viewer,
-            classification: item.classification,
-            collected_at: item.collected_at,
-            datatype: item.datatype,
-            filesize: item.filesize,
-            program: item.program,
-            streaming_url: viewUrl,
-            sensor: item.sensor,
-            //srs: item.srs[0],
-            density: item.density,
-            Convert_Data_Type:	"https://stews-api.dodterrain.org/admin/",
-            Generate_STE_3D_Terrain_pack:	"https://stews-api.dodterrain.org/admin/",
-            Clip_and_ship:	"https://stews-api.dodterrain.org/admin/",
-            Upload_raw:	"https://stews-api.dodterrain.org/admin/"
-          };
-          const polygon = {
-            type: "polygon",
-            rings: [msPoly, fullEnv]
-          };
-          const graphic = new Graphic({
-            geometry: polygon,
-            attributes: lineAtt
-          });
-          msGfx[i] = graphic;
-          var fgString = "<li style='display:block'><label style= 'position:relative;left:10%;' for='" + item.name + "' style='word-wrap:break-word'>" +
-            "<input type='checkbox' style='position:absolute; left:-58%; top:25%;' id='" + item.name + "' name='" + item.name + 
-            "' value='" + item.name + "' >" + item.name + "</label></li>";
-          this.state.fgHTML = this.state.fgHTML.concat(fgString);
-          var div = document.getElementById("fgLayers") as HTMLDivElement;
-          div.innerHTML = fgString;
         }
-
+        
         for(var i = 0; i < response.data.meshes.length; i++){
           meshPoly = [];
           var fullEnv = [];
@@ -436,7 +427,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           const lineAtt = {
             ObjectID: y,
             Name: item.name,
-            Type: "Mesh"
+            Type: "Mesh",
             access_tag: item.access_tag, 
             cesium_viewer: item.cesium_viewer,
             classification: item.classification,
@@ -741,10 +732,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
                   fieldName: "access_tag",
                   label: "Access Tag"
                 },
-                {
+                /* {
                   fieldName: "cesium_viewer",
                   label: "Cesium Viewer URL"
-                },
+                }, */
                 {
                   fieldName: "classification",
                   label: "Classification"

@@ -12,3 +12,10 @@
       width: 100%;
     }
   }
+  .MuiDialogContent-root{
+    height: 447px;
+    width: 400px;
+  }
+  .MuiButton-label {
+    margin-left: 5px;
+  }
